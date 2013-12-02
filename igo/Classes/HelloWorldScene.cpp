@@ -72,6 +72,7 @@ bool HelloWorld::init()
     this->addChild(ban);
     ban->putGoishi(4, 4, WHITE);
     ban->putGoishi(4, 3, BLACK);
+    ban->showCandidate(3, 3);
     
     return true;
 }

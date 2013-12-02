@@ -289,6 +289,9 @@
 		25A3FB7F184CA541004E739F /* shiro.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A3FB7D184CA541004E739F /* shiro.png */; };
 		25A3FB82184CA8A3004E739F /* Ban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB80184CA8A3004E739F /* Ban.cpp */; };
 		25A3FB85184CAB7F004E739F /* Goishi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB83184CAB7F004E739F /* Goishi.cpp */; };
+		25A3FB89184CB3D7004E739F /* Candidate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB87184CB3D7004E739F /* Candidate.cpp */; };
+		25A3FB8B184CB44A004E739F /* candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A3FB8A184CB44A004E739F /* candidate.png */; };
+		25A3FB8D184CB519004E739F /* BanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB8C184CB519004E739F /* BanTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -905,6 +908,10 @@
 		25A3FB83184CAB7F004E739F /* Goishi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Goishi.cpp; sourceTree = "<group>"; };
 		25A3FB84184CAB7F004E739F /* Goishi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goishi.h; sourceTree = "<group>"; };
 		25A3FB86184CAC67004E739F /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		25A3FB87184CB3D7004E739F /* Candidate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Candidate.cpp; sourceTree = "<group>"; };
+		25A3FB88184CB3D7004E739F /* Candidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Candidate.h; sourceTree = "<group>"; };
+		25A3FB8A184CB44A004E739F /* candidate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = candidate.png; sourceTree = "<group>"; };
+		25A3FB8C184CB519004E739F /* BanTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BanTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -991,6 +998,7 @@
 			children = (
 				25A3F7C8184C9470004E739F /* CloseNormal.png */,
 				25A3F7CA184C9470004E739F /* CloseSelected.png */,
+				25A3FB8A184CB44A004E739F /* candidate.png */,
 				25A3F7CC184C9470004E739F /* Default.png */,
 				25A3F7D0184C9470004E739F /* Icon-72.png */,
 				25A3F7D2184C9470004E739F /* Icon-Small-50.png */,
@@ -2149,6 +2157,8 @@
 				25A3FB83184CAB7F004E739F /* Goishi.cpp */,
 				25A3FB84184CAB7F004E739F /* Goishi.h */,
 				25A3FB86184CAC67004E739F /* Const.h */,
+				25A3FB87184CB3D7004E739F /* Candidate.cpp */,
+				25A3FB88184CB3D7004E739F /* Candidate.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2158,6 +2168,7 @@
 			children = (
 				25A3FB74184C9AF7004E739F /* igo_Tests.m */,
 				25A3FB6F184C9AF7004E739F /* Supporting Files */,
+				25A3FB8C184CB519004E739F /* BanTest.mm */,
 			);
 			path = "igo Tests";
 			sourceTree = "<group>";
@@ -2259,6 +2270,7 @@
 				25A3F7D7184C9470004E739F /* Icon-Small@2x.png in Resources */,
 				25A3F7CD184C9470004E739F /* Default.png in Resources */,
 				25A3F7CB184C9470004E739F /* CloseSelected.png in Resources */,
+				25A3FB8B184CB44A004E739F /* candidate.png in Resources */,
 				25A3F7DB184C9470004E739F /* Icon@2x.png in Resources */,
 				25A3F9F0184C9473004E739F /* project.pbxproj in Resources */,
 			);
@@ -2490,6 +2502,7 @@
 				25A3FAB1184C9474004E739F /* Animation.cpp in Sources */,
 				25A3FAD2184C9475004E739F /* extension.cpp in Sources */,
 				25A3FA58184C9474004E739F /* CCControlButton.cpp in Sources */,
+				25A3FB89184CB3D7004E739F /* Candidate.cpp in Sources */,
 				25A3F88C184C9471004E739F /* quaternion.c in Sources */,
 				25A3F7FE184C9470004E739F /* CCActionInstant.cpp in Sources */,
 				25A3FA49184C9474004E739F /* CCComAudio.cpp in Sources */,
@@ -2538,6 +2551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A3FB75184C9AF7004E739F /* igo_Tests.m in Sources */,
+				25A3FB8D184CB519004E739F /* BanTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

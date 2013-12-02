@@ -38,14 +38,30 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     this->addChild(ishi);
     this->setScale(this->getScale());
     
+    ishi->setPosition(this->getPos(x, y));//TODO:(x, y)から計算しておく。
+    return true;
+}
+
+bool Ban::showCandidate(int x, int y){
+    CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
+    CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
+    Candidate* candidate = Candidate::create("candidate.png");
+    
+    this->addChild(candidate);
+    this->setScale(this->getScale());
+    candidate->setPosition(this->getPos(x, y));
+    return true;
+}
+
+CCPoint Ban::getPos(int x, int y){
+    CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
+    CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
     float width  = this->getContentSize().width;
     float height = this->getContentSize().height;
     
     float posX = ( width / (BAN_SIZE - 1) ) * x;
     float posY = ( height / (BAN_SIZE - 1) ) * y;
-    
-    ishi->setPosition(ccp(posX, posY));//TODO:(x, y)から計算しておく。
-    return true;
+    return ccp(posX, posY);
 }
 
 Ban::Ban(){
