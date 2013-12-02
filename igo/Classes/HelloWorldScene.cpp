@@ -63,7 +63,7 @@ bool HelloWorld::init()
     this->addChild(pLabel, 1);
 
     // add "HelloWorld" splash screen"
-    Ban* ban = Ban::create("ban.png");
+    ban = Ban::create("ban.png");
     // position the sprite on the center of the screen
     ban->setPosition( ccp(size.width/2, size.height/2) );
     ban->setScale(0.55);
@@ -74,7 +74,34 @@ bool HelloWorld::init()
     ban->putGoishi(4, 3, BLACK);
     ban->showCandidate(3, 3);
     
+    this->setTouchEnabled(true);
+    
     return true;
+}
+
+void HelloWorld::ccTouchesBegan(CCSet* pTouches, CCEvent* event){
+    CCSetIterator i;
+    CCTouch* touch;
+    
+    CCPoint loc;
+    for( i = pTouches->begin(); i != pTouches->end(); i++ ){
+        touch = (CCTouch*) (*i);
+        if(touch) {
+            ban->onTouchStart(touch);
+        }
+    }
+}
+
+void HelloWorld::ccTouchesMoved(CCSet* pTouches, CCEvent* event){
+    CCSetIterator i;
+    CCTouch* touch;
+
+    for( i = pTouches->begin(); i != pTouches->end(); i++ ){
+        touch = (CCTouch*) (*i);
+        if(touch) {
+            ban->onTouchMove(touch);
+        }
+    }
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)

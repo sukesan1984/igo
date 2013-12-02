@@ -26,6 +26,9 @@ public:
     // 候補を表示する。
     bool showCandidate(int x, int y);
     
+    void onTouchStart(CCTouch* touch);
+    void onTouchMove(CCTouch* touch);
+    
     CCPoint getPos(int x, int y);
     Ban();
     ~Ban();

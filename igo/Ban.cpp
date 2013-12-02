@@ -64,6 +64,14 @@ CCPoint Ban::getPos(int x, int y){
     return ccp(posX, posY);
 }
 
+void Ban::onTouchStart(cocos2d::CCTouch *touch){
+    CCLOG("onTouchStart");
+}
+
+void Ban::onTouchMove(cocos2d::CCTouch *touch){
+    CCLOG("onTouchMove");
+}
+
 Ban::Ban(){
 }
 
