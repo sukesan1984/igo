@@ -41,11 +41,11 @@
 }
 
 // For ios6, use supportedInterfaceOrientations & shouldAutorotate instead
-- (NSUInteger) supportedInterfaceOrientations{
-#ifdef __IPHONE_6_0
-    return UIInterfaceOrientationMaskLandscape;
-#endif
-}
+//- (NSUInteger) supportedInterfaceOrientations{
+//#ifdef __IPHONE_6_0
+//    return UIInterfaceOrientationMaskLandscape;
+//#endif
+//}
 
 - (BOOL) shouldAutorotate {
     return YES;
