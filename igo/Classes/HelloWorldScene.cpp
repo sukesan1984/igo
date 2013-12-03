@@ -70,9 +70,6 @@ bool HelloWorld::init()
    
     // add the sprite as a child to this layer
     this->addChild(ban);
-    ban->putGoishi(4, 4, WHITE);
-    ban->putGoishi(4, 3, BLACK);
-    ban->showCandidate(3, 3);
     
     this->setTouchEnabled(true);
     

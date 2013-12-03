@@ -38,7 +38,8 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     this->addChild(ishi);
     this->setScale(this->getScale());
     
-    ishi->setPosition(this->getPos(x, y));//TODO:(x, y)から計算しておく。
+    ishi->setPosition(this->getPos(x, y));
+    
     return true;
 }
 
@@ -66,13 +67,37 @@ CCPoint Ban::getPos(int x, int y){
 
 void Ban::onTouchStart(cocos2d::CCTouch *touch){
     CCLOG("onTouchStart");
+    CCPoint tap = CCDirector::sharedDirector()->convertToGL( touch->getLocationInView() );
+    CCPoint tapPos = this->getTouchedPos(tap);
+    GOISHI type;
+    if(turn % 2){
+        type = WHITE;
+    } else {
+        type = BLACK;
+    }
+    if( this->putGoishi(tapPos.x, tapPos.y, type) ){
+        turn++;
+    }
 }
 
 void Ban::onTouchMove(cocos2d::CCTouch *touch){
     CCLOG("onTouchMove");
 }
 
+CCPoint Ban::getTouchedPos(cocos2d::CCPoint touchedLocation){
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
+    float scale = this->getScale();
+    float offSetX = (size.width - this->getContentSize().width * scale) / 2;
+    float offSetY = (size.height - this->getContentSize().height * scale) / 2;
+    
+    float masuSize = this->getContentSize().width * scale / (BAN_SIZE - 1);
+    int X = round( (touchedLocation.x - offSetX) / masuSize );
+    int Y = round( (touchedLocation.y - offSetY) / masuSize );
+    return ccp(X, Y);
+}
+
 Ban::Ban(){
+    turn = 0;
 }
 
 Ban::~Ban(){

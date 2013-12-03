@@ -17,6 +17,8 @@
 using namespace cocos2d;
 
 class Ban : public CCSprite {
+    int turn; //何手目か
+    CCDictionary* banmen;
 public:
     static Ban* create(const char *pszFileName);
     // 置く候補を立てる。
@@ -30,6 +32,7 @@ public:
     void onTouchMove(CCTouch* touch);
     
     CCPoint getPos(int x, int y);
+    CCPoint getTouchedPos(CCPoint touchedLocation);
     Ban();
     ~Ban();
 };

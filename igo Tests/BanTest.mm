@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Ban.h"
 
 @interface BanTest : XCTestCase
 
@@ -26,9 +27,15 @@
     [super tearDown];
 }
 
-- (void)testExample
+
+- (void)testGetTouchedPos
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    Ban* ban = Ban::create("ban.png");
+    ban->setScale(0.55);
+    
+    XCTAssertEqual(CCPoint(0, 0), ban->getTouchedPos(ccp(19.2, 99.2)));
+    XCTAssertEqual(CCPoint(4, 4), ban->getTouchedPos(ccp(160, 240)));
+    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end
