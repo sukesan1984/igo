@@ -14,11 +14,12 @@
 #include "Const.h"
 #include "Goishi.h"
 #include "Candidate.h"
+#include "Goban.h"
 using namespace cocos2d;
 
 class Ban : public CCSprite {
-    int goban[BAN_SIZE-1][BAN_SIZE-1];
     int turn; //何手目か
+    Goban* goban;
     CCDictionary* banmen;
 public:
     static Ban* create(const char *pszFileName);
@@ -26,13 +27,10 @@ public:
     // 候補があれば候補の位置に石を置く。
     // 座標に石（黒 or 白)を置く。置けたら:true, 置けなかったら:false
     bool putGoishi(int x, int y, GOISHI goishi);
-    // goban上にflagを立てる。
-    void setGoishi(int x, int y);
-    
-    // すでに、石が置かれているかどうかを判定する。
-    bool hasGoishi(int x, int y);
     // 候補を表示する。
     bool showCandidate(int x, int y);
+    
+    // ある位置の碁石の周りに碁石があるかどうかを返す。
     
     void onTouchStart(CCTouch* touch);
     void onTouchMove(CCTouch* touch);

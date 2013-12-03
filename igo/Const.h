@@ -10,6 +10,7 @@
 #define igo_Const_h
 
 enum GOISHI {
+    NONE = 0,
     WHITE = 1,
     BLACK = 2
 };

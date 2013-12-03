@@ -25,7 +25,7 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
     CCAssert(goishi, "WHITE or BLACK must be defined");
     Goishi* ishi;
-    if (this->hasGoishi(x, y)){
+    if (this->goban->hasGoishi(x, y)){
         return false;
     }
     switch(goishi){
@@ -40,22 +40,11 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     }
     this->addChild(ishi);
     this->setScale(this->getScale());
-    this->setGoishi(x, y);
+    this->goban->setGoishi(x, y, goishi);
     
     ishi->setPosition(this->getPos(x, y));
     
     return true;
-}
-
-void Ban::setGoishi(int x, int y){
-    goban[x][y] = 1;
-}
-
-bool Ban::hasGoishi(int x, int y){
-    if(goban[x][y] == 1){
-        return true;
-    }
-    return false;
 }
 
 bool Ban::showCandidate(int x, int y){
@@ -113,6 +102,7 @@ CCPoint Ban::getTouchedPos(cocos2d::CCPoint touchedLocation){
 
 Ban::Ban(){
     turn = 0;
+    goban = new Goban();
 }
 
 Ban::~Ban(){

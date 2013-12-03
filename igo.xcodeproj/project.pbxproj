@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259B45BB184E19A600E79F42 /* Goban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259B45B9184E19A600E79F42 /* Goban.cpp */; };
+		259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 259B45BC184E201B00E79F42 /* GobanTest.mm */; };
 		25A3F7B7184C9470004E739F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7B6184C9470004E739F /* QuartzCore.framework */; };
 		25A3F7B9184C9470004E739F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7B8184C9470004E739F /* OpenGLES.framework */; };
 		25A3F7BB184C9470004E739F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7BA184C9470004E739F /* OpenAL.framework */; };
@@ -305,6 +307,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		259B45B9184E19A600E79F42 /* Goban.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Goban.cpp; sourceTree = "<group>"; };
+		259B45BA184E19A600E79F42 /* Goban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goban.h; sourceTree = "<group>"; };
+		259B45BC184E201B00E79F42 /* GobanTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GobanTest.mm; sourceTree = "<group>"; };
 		25A3F7B3184C9470004E739F /* igo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A3F7B6184C9470004E739F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		25A3F7B8184C9470004E739F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2159,6 +2164,8 @@
 				25A3FB86184CAC67004E739F /* Const.h */,
 				25A3FB87184CB3D7004E739F /* Candidate.cpp */,
 				25A3FB88184CB3D7004E739F /* Candidate.h */,
+				259B45B9184E19A600E79F42 /* Goban.cpp */,
+				259B45BA184E19A600E79F42 /* Goban.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2166,9 +2173,10 @@
 		25A3FB6E184C9AF6004E739F /* igo Tests */ = {
 			isa = PBXGroup;
 			children = (
+				259B45BC184E201B00E79F42 /* GobanTest.mm */,
+				25A3FB8C184CB519004E739F /* BanTest.mm */,
 				25A3FB74184C9AF7004E739F /* igo_Tests.m */,
 				25A3FB6F184C9AF7004E739F /* Supporting Files */,
-				25A3FB8C184CB519004E739F /* BanTest.mm */,
 			);
 			path = "igo Tests";
 			sourceTree = "<group>";
@@ -2485,6 +2493,7 @@
 				25A3F890184C9471004E739F /* utility.c in Sources */,
 				25A3F8CE184C9471004E739F /* CCParticleBatchNode.cpp in Sources */,
 				25A3F7E7184C9470004E739F /* main.m in Sources */,
+				259B45BB184E19A600E79F42 /* Goban.cpp in Sources */,
 				25A3F9B3184C9473004E739F /* CCTextureCache.cpp in Sources */,
 				25A3F986184C9472004E739F /* ccCArray.cpp in Sources */,
 				25A3F849184C9470004E739F /* CCString.cpp in Sources */,
@@ -2550,6 +2559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */,
 				25A3FB75184C9AF7004E739F /* igo_Tests.m in Sources */,
 				25A3FB8D184CB519004E739F /* BanTest.mm in Sources */,
 			);
