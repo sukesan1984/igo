@@ -30,7 +30,6 @@ public:
     // 候補を表示する。
     bool showCandidate(int x, int y);
     
-    // ある位置の碁石の周りに碁石があるかどうかを返す。
     
     void onTouchStart(CCTouch* touch);
     void onTouchMove(CCTouch* touch);

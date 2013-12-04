@@ -39,4 +39,29 @@
     }
 }
 
+- (void)testHasKokyuAround
+{
+    Goban* goban1 = new Goban();
+    goban1->setGoishi(0, 0, WHITE);
+    goban1->setGoishi(1, 0, WHITE);
+    goban1->setGoishi(0, 1, WHITE);
+    XCTAssertEqual(goban1->hasKokyuAround(0, 0), false);
+    XCTAssertEqual(goban1->hasKokyuAround(1, 0), true);
+    
+    Goban* goban2 = new Goban();
+    goban2->setGoishi(1, 1, WHITE);
+    goban2->setGoishi(0, 1, BLACK);
+    goban2->setGoishi(2, 1, BLACK);
+    goban2->setGoishi(1, 0, BLACK);
+    goban2->setGoishi(1, 2, BLACK);
+    XCTAssertEqual(goban2->hasKokyuAround(1, 1), false);
+    XCTAssertEqual(goban2->hasKokyuAround(1, 2), true);
+    
+    Goban* goban3 = new Goban();
+    goban3->setGoishi(8, 8, WHITE);
+    goban3->setGoishi(7, 8, WHITE);
+    goban3->setGoishi(8, 7, BLACK);
+    XCTAssertEqual(goban3->hasKokyuAround(8, 8), false);
+}
+
 @end

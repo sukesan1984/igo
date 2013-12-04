@@ -20,6 +20,12 @@ public:
     
     // すでに、石が置かれているかどうかを判定する。
     bool hasGoishi(int x, int y);
+    
+    // ある位置の碁石の周りに呼吸点があるかどうかを返す。
+    bool hasKokyuAround(int x, int y);
+    
+    // 置かれた時に消える碁石があるのか。
+    
     Goban();
     ~Goban();
 };

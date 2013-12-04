@@ -27,5 +27,29 @@ Goban::Goban(){
     }
 }
 
+bool Goban::hasKokyuAround(int x, int y){
+    //左(x - 1)
+    //左端の時は、左には呼吸点無し。
+    if(x != 0 && goban[x-1][y] == NONE){
+        return true;
+    }
+    //右(x + 1)
+    //右端の時は、右には呼吸点無し。
+    if(x != (BAN_SIZE - 1) && goban[x+1][y] == NONE){
+        return true;
+    }
+    //下(y - 1)
+    //下端の時は、下には呼吸点無し。
+    if(y != 0 && goban[x][y-1] == NONE){
+        return true;
+    }
+    //上(y + 1)
+    //上端の時は、上には呼吸点無し。
+    if(y != (BAN_SIZE - 1) && goban[x][y+1] == NONE){
+        return true;
+    }
+    return false;
+}
+
 Goban::~Goban(){
 }
