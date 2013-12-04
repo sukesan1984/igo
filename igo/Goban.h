@@ -12,9 +12,12 @@
 #include <iostream>
 #include "Const.h"
 
+using namespace std;
+
 class Goban{
 public:
     GOISHI goban[BAN_SIZE][BAN_SIZE]; //何も無い時はundef, WHITE, BLACKが入る。
+    bool checkBoard[BAN_SIZE][BAN_SIZE];
     // goban上にflagを立てる。
     void setGoishi(int x, int y, GOISHI goishi);
     
@@ -22,8 +25,11 @@ public:
     bool hasGoishi(int x, int y);
     
     // ある位置の碁石の周りに呼吸点があるかどうかを返す。
-    bool hasKokyuAround(int x, int y);
+    bool hasKokyuAround(int x, int y, GOISHI color);
     
+    void removeGoishi(int x, int y, GOISHI color);
+    
+    void clearCheckBoard();
     // 置かれた時に消える碁石があるのか。
     
     Goban();
