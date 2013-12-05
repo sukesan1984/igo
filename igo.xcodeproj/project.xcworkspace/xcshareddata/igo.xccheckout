@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D23B757B-F444-4203-ACA2-786719D38FD5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>igo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F4815546-FD30-4F96-87E2-56D0000F4BBA</key>
+		<string>ssh://github.com/sukesan1984/igo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>igo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F4815546-FD30-4F96-87E2-56D0000F4BBA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/sukesan1984/igo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F4815546-FD30-4F96-87E2-56D0000F4BBA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F4815546-FD30-4F96-87E2-56D0000F4BBA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>igo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
