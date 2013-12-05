@@ -2762,7 +2762,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "igo Tests/igo Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = igo/libs;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = igo/libs/libwebsockets/ios/lib/;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
