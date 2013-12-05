@@ -9,11 +9,11 @@ clean:
 
 test:
 	xcodebuild \
-		test -target $(TEST_TARGET) \
+		test -workspace igo.xcodeproj/project.xcworkspace \
 		-destination 'name=iPhone Retina (3.5-inch),OS=7.0' \
 		-configuration Debug \
 		-sdk iphonesimulator \
-		-scheme $(SCHEME)
+		-scheme $(SCHEME) \
 
 	#xcodebuild \
 		#-project $(PROJECT) \
