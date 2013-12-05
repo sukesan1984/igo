@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		259B45BB184E19A600E79F42 /* Goban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259B45B9184E19A600E79F42 /* Goban.cpp */; };
 		259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 259B45BC184E201B00E79F42 /* GobanTest.mm */; };
+		259C6E651850B14D006D7D28 /* goishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 259C6E641850B14D006D7D28 /* goishi.png */; };
+		259C6E671850B2FD006D7D28 /* goishi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 259C6E661850B2FD006D7D28 /* goishi.plist */; };
 		25A3F7B7184C9470004E739F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7B6184C9470004E739F /* QuartzCore.framework */; };
 		25A3F7B9184C9470004E739F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7B8184C9470004E739F /* OpenGLES.framework */; };
 		25A3F7BB184C9470004E739F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7BA184C9470004E739F /* OpenAL.framework */; };
@@ -294,6 +296,11 @@
 		25A3FB89184CB3D7004E739F /* Candidate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB87184CB3D7004E739F /* Candidate.cpp */; };
 		25A3FB8B184CB44A004E739F /* candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A3FB8A184CB44A004E739F /* candidate.png */; };
 		25A3FB8D184CB519004E739F /* BanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB8C184CB519004E739F /* BanTest.mm */; };
+		25F9BD561850353800ED6440 /* Ban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB80184CA8A3004E739F /* Ban.cpp */; };
+		25F9BD571850354400ED6440 /* Goishi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB83184CAB7F004E739F /* Goishi.cpp */; };
+		25F9BD581850354800ED6440 /* Candidate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB87184CB3D7004E739F /* Candidate.cpp */; };
+		25F9BD591850354A00ED6440 /* Goban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259B45B9184E19A600E79F42 /* Goban.cpp */; };
+		25F9BD7118503C8E00ED6440 /* project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = 25A3F9EF184C9473004E739F /* project.pbxproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +317,8 @@
 		259B45B9184E19A600E79F42 /* Goban.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Goban.cpp; sourceTree = "<group>"; };
 		259B45BA184E19A600E79F42 /* Goban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goban.h; sourceTree = "<group>"; };
 		259B45BC184E201B00E79F42 /* GobanTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GobanTest.mm; sourceTree = "<group>"; };
+		259C6E641850B14D006D7D28 /* goishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goishi.png; sourceTree = "<group>"; };
+		259C6E661850B2FD006D7D28 /* goishi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = goishi.plist; sourceTree = "<group>"; };
 		25A3F7B3184C9470004E739F /* igo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = igo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A3F7B6184C9470004E739F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		25A3F7B8184C9470004E739F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -900,7 +909,7 @@
 		25A3FB5B184C9475004E739F /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		25A3FB5C184C9475004E739F /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
 		25A3FB63184C9987004E739F /* ban.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ban.png; sourceTree = "<group>"; };
-		25A3FB69184C9AF6004E739F /* igo Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "igo Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A3FB69184C9AF6004E739F /* igoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = igoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A3FB6A184C9AF6004E739F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		25A3FB70184C9AF7004E739F /* igo Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "igo Tests-Info.plist"; sourceTree = "<group>"; };
 		25A3FB72184C9AF7004E739F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -965,7 +974,7 @@
 			isa = PBXGroup;
 			children = (
 				25A3F7B3184C9470004E739F /* igo.app */,
-				25A3FB69184C9AF6004E739F /* igo Tests.xctest */,
+				25A3FB69184C9AF6004E739F /* igoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1001,6 +1010,8 @@
 		25A3F7C7184C9470004E739F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				259C6E641850B14D006D7D28 /* goishi.png */,
+				259C6E661850B2FD006D7D28 /* goishi.plist */,
 				25A3F7C8184C9470004E739F /* CloseNormal.png */,
 				25A3F7CA184C9470004E739F /* CloseSelected.png */,
 				25A3FB8A184CB44A004E739F /* candidate.png */,
@@ -2211,9 +2222,9 @@
 			productReference = 25A3F7B3184C9470004E739F /* igo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		25A3FB68184C9AF6004E739F /* igo Tests */ = {
+		25A3FB68184C9AF6004E739F /* igoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25A3FB79184C9AF7004E739F /* Build configuration list for PBXNativeTarget "igo Tests" */;
+			buildConfigurationList = 25A3FB79184C9AF7004E739F /* Build configuration list for PBXNativeTarget "igoTests" */;
 			buildPhases = (
 				25A3FB65184C9AF6004E739F /* Sources */,
 				25A3FB66184C9AF6004E739F /* Frameworks */,
@@ -2224,9 +2235,9 @@
 			dependencies = (
 				25A3FB78184C9AF7004E739F /* PBXTargetDependency */,
 			);
-			name = "igo Tests";
+			name = igoTests;
 			productName = "igo Tests";
-			productReference = 25A3FB69184C9AF6004E739F /* igo Tests.xctest */;
+			productReference = 25A3FB69184C9AF6004E739F /* igoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -2255,7 +2266,7 @@
 			projectRoot = "";
 			targets = (
 				25A3F7B2184C9470004E739F /* igo */,
-				25A3FB68184C9AF6004E739F /* igo Tests */,
+				25A3FB68184C9AF6004E739F /* igoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2273,6 +2284,8 @@
 				25A3F7D5184C9470004E739F /* Icon-Small.png in Resources */,
 				25A3F7D1184C9470004E739F /* Icon-72.png in Resources */,
 				25A3FB7F184CA541004E739F /* shiro.png in Resources */,
+				259C6E651850B14D006D7D28 /* goishi.png in Resources */,
+				259C6E671850B2FD006D7D28 /* goishi.plist in Resources */,
 				25A3F7D3184C9470004E739F /* Icon-Small-50.png in Resources */,
 				25A3F7DD184C9470004E739F /* iTunesArtwork in Resources */,
 				25A3F7D7184C9470004E739F /* Icon-Small@2x.png in Resources */,
@@ -2289,6 +2302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A3FB73184C9AF7004E739F /* InfoPlist.strings in Resources */,
+				25F9BD7118503C8E00ED6440 /* project.pbxproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2560,6 +2574,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */,
+				25F9BD581850354800ED6440 /* Candidate.cpp in Sources */,
+				25F9BD561850353800ED6440 /* Ban.cpp in Sources */,
+				25F9BD571850354400ED6440 /* Goishi.cpp in Sources */,
+				25F9BD591850354A00ED6440 /* Goban.cpp in Sources */,
 				25A3FB75184C9AF7004E739F /* igo_Tests.m in Sources */,
 				25A3FB8D184CB519004E739F /* BanTest.mm in Sources */,
 			);
@@ -2736,6 +2754,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -2777,6 +2796,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "igo Tests/igo Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -2811,7 +2831,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25A3FB79184C9AF7004E739F /* Build configuration list for PBXNativeTarget "igo Tests" */ = {
+		25A3FB79184C9AF7004E739F /* Build configuration list for PBXNativeTarget "igoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25A3FB7A184C9AF7004E739F /* Debug */,

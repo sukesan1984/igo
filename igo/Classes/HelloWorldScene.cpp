@@ -39,6 +39,7 @@ bool HelloWorld::init()
                                         "CloseSelected.png",
                                         this,
                                         menu_selector(HelloWorld::menuCloseCallback) );
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("goishi.plist");
     pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
 
     // create menu, it's an autorelease object

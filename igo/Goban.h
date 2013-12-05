@@ -24,6 +24,9 @@ public:
     // すでに、石が置かれているかどうかを判定する。
     bool hasGoishi(int x, int y);
     
+    //　置かれた碁石の周りをチェックして消すときは消す。
+    void tryToRemoveAround(int x, int y, GOISHI color);
+    
     // ある位置の碁石の周りに呼吸点があるかどうかを返す。
     bool hasKokyuAround(int x, int y, GOISHI color);
     

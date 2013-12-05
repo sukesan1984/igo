@@ -21,6 +21,7 @@ class Ban : public CCSprite {
     int turn; //何手目か
     Goban* goban;
     CCDictionary* banmen;
+    Goishi* sprites[BAN_SIZE][BAN_SIZE];
 public:
     static Ban* create(const char *pszFileName);
     // 置く候補を立てる。
@@ -36,6 +37,7 @@ public:
     
     CCPoint getPos(int x, int y);
     CCPoint getTouchedPos(CCPoint touchedLocation);
+    void update(); //盤面を更新する。
     Ban();
     ~Ban();
 };

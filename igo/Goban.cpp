@@ -28,7 +28,52 @@ Goban::Goban(){
     }
 }
 
+void Goban::tryToRemoveAround(int x, int y, GOISHI color){
+    //置かれた石と色が違うときだけ
+    //左
+    if(x != 0 && color != this->goban[x-1][y] ){
+        //呼吸点を持たないときは、消す処理
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x-1, y, this->goban[x-1][y])){
+            this->clearCheckBoard();
+            this->removeGoishi(x-1, y, this->goban[x-1][y]);
+        }
+    }
+    
+    //右
+    if( x != BAN_SIZE - 1 && color != this->goban[x+1][y]){
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x+1, y, this->goban[x+1][y])){
+            this->clearCheckBoard();
+            this->removeGoishi(x+1, y, this->goban[x+1][y]);
+        }
+    }
+    
+    //下
+    if( y != 0 && color != this->goban[x][y-1]){
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x, y-1, this->goban[x][y-1])){
+            this->clearCheckBoard();
+            this->removeGoishi(x, y-1 , this->goban[x][y-1]);
+        }
+    }
+    
+    //上
+    if( y != BAN_SIZE - 1 && color != this->goban[x][y+1]){
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x, y+1, this->goban[x][y+1])){
+            this->clearCheckBoard();
+            this->removeGoishi(x, y+1, this->goban[x][y+1]);
+        }
+    }
+}
+
 void Goban::removeGoishi(int x, int y, GOISHI color){
+    //既にチェック済みなら何もしない。
+    if(this->checkBoard[x][y]){
+        return;
+    }
+    this->checkBoard[x][y] = true;
     if(this->goban[x][y] == color){
         this->goban[x][y] = NONE;
     }

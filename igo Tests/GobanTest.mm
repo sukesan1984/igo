@@ -41,6 +41,20 @@ using namespace std;
     }
 }
 
+- (void)testTryToRemoveAround
+{
+    Goban* goban = new Goban();
+    goban->setGoishi(1, 1, BLACK);
+    goban->setGoishi(0, 1, WHITE);
+    goban->setGoishi(2, 1, WHITE);
+    goban->setGoishi(1, 0, WHITE);
+    goban->setGoishi(1, 2, WHITE);
+    
+    goban->tryToRemoveAround(1, 2, WHITE);
+    
+    XCTAssertEqual(goban->goban[1][1], NONE);
+}
+
 - (void)testRemoveGoishi
 {
     Goban* goban = new Goban();
@@ -62,6 +76,13 @@ using namespace std;
 
 - (void)testHasKokyuAround
 {
+    //左に石があるだけ
+    Goban* goban = new Goban();
+    goban->setGoishi(1, 1, BLACK);
+    goban->setGoishi(0, 1, WHITE);
+    XCTAssertEqual(goban->hasKokyuAround(1, 1, BLACK), true);
+    
+    
     //左上隅
     //空点無し
     Goban* goban1 = new Goban();
