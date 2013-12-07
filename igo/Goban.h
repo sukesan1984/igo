@@ -31,12 +31,13 @@ public:
     bool hasCanGetGoishiAround(int x, int y);
     
     //　置かれた碁石の周りをチェックして消すときは消す。
-    void tryToRemoveAround(int x, int y, GOISHI color);
+    int tryToRemoveAround(int x, int y, GOISHI color);
     
     // ある位置の碁石の周りに呼吸点があるかどうかを返す。
     bool hasKokyuAround(int x, int y, GOISHI color);
     
-    void removeGoishi(int x, int y, GOISHI color);
+    //碁石を取り除いて、取り除いた数を返す。
+    int removeGoishi(int x, int y, GOISHI color);
     
     void clearCheckBoard();
     

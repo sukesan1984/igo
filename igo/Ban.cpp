@@ -41,7 +41,8 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
         return false;
     }
     this->goban->setGoishi(x, y, goishi);
-    this->goban->tryToRemoveAround(x, y, this->goban->getGoishi(x, y));
+    int removedNum = this->goban->tryToRemoveAround(x, y, this->goban->getGoishi(x, y));
+    CCLog("消えた:%d", removedNum);
     this->update();
     
     return true;

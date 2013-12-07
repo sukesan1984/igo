@@ -46,15 +46,16 @@ Goban::Goban(){
     }
 }
 
-void Goban::tryToRemoveAround(int x, int y, GOISHI color){
+int Goban::tryToRemoveAround(int x, int y, GOISHI color){
     //置かれた石と色が違うときだけ
+    int removedNum = 0;
     //左
     if(x != 0 && color != this->getGoishi(x-1, y) ){
         //呼吸点を持たないときは、消す処理
         this->clearCheckBoard();
         if(!this->hasKokyuAround(x-1, y, this->getGoishi(x-1, y))){
             this->clearCheckBoard();
-            this->removeGoishi(x-1, y, this->getGoishi(x-1, y));
+            removedNum += this->removeGoishi(x-1, y, this->getGoishi(x-1, y));
         }
     }
     
@@ -63,7 +64,7 @@ void Goban::tryToRemoveAround(int x, int y, GOISHI color){
         this->clearCheckBoard();
         if(!this->hasKokyuAround(x+1, y, this->getGoishi(x+1, y))){
             this->clearCheckBoard();
-            this->removeGoishi(x+1, y, this->getGoishi(x+1, y));
+            removedNum += this->removeGoishi(x+1, y, this->getGoishi(x+1, y));
         }
     }
     
@@ -72,7 +73,7 @@ void Goban::tryToRemoveAround(int x, int y, GOISHI color){
         this->clearCheckBoard();
         if(!this->hasKokyuAround(x, y-1, this->getGoishi(x, y-1))){
             this->clearCheckBoard();
-            this->removeGoishi(x, y-1 , this->getGoishi(x, y-1));
+            removedNum += this->removeGoishi(x, y-1 , this->getGoishi(x, y-1));
         }
     }
     
@@ -81,43 +82,50 @@ void Goban::tryToRemoveAround(int x, int y, GOISHI color){
         this->clearCheckBoard();
         if(!this->hasKokyuAround(x, y+1, this->getGoishi(x, y+1))){
             this->clearCheckBoard();
-            this->removeGoishi(x, y+1, this->getGoishi(x, y+1));
+            removedNum += this->removeGoishi(x, y+1, this->getGoishi(x, y+1));
         }
     }
+    return removedNum;
 }
 
-void Goban::removeGoishi(int x, int y, GOISHI color){
+int Goban::removeGoishi(int x, int y, GOISHI color){
     //既にチェック済みなら何もしない。
+    int removedNum = 0;
     if(this->checkBoard[x][y]){
-        return;
+        return removedNum;
     }
     this->checkBoard[x][y] = true;
     if(this->getGoishi(x, y) == color){
         this->setGoishi(x, y, NONE);
+        removedNum++;
     }
     
     //左
     if(x > 0 && this->getGoishi(x-1, y) == color ){
-        this->removeGoishi(x-1, y, color);
+        removedNum += this->removeGoishi(x-1, y, color);
     }
     
     //右
     if(x < (BAN_SIZE-1) && this->getGoishi(x+1, y) == color){
-        this->removeGoishi(x+1, y, color);
+        removedNum += this->removeGoishi(x+1, y, color);
     }
     
     //下
     if(y > 0 && this->getGoishi(x, y-1) == color){
-        this->removeGoishi(x, y-1, color);
+        removedNum += this->removeGoishi(x, y-1, color);
     }
     
     if(y < (BAN_SIZE - 1) && this->getGoishi(x, y+1) == color){
-        this->removeGoishi(x, y+1, color);
+        removedNum += this->removeGoishi(x, y+1, color);
     }
+    return removedNum;
 }
 
 //x, yが呼吸点を回りに持つならば、true
 bool Goban::hasKokyuAround(int x, int y, GOISHI color){
+    if(color == NONE){
+        return true;
+    }
     //既にチェック済みならば、false
     if(this->checkBoard[x][y]){
         return false;

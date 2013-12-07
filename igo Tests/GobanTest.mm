@@ -127,7 +127,7 @@ using namespace std;
     goban->setGoishi(1, 0, WHITE);
     goban->setGoishi(1, 2, WHITE);
     
-    goban->tryToRemoveAround(1, 2, WHITE);
+    XCTAssertEqual(goban->tryToRemoveAround(1, 2, WHITE), 1);
     
     XCTAssertEqual(goban->goban[1][1], NONE);
 }
@@ -142,7 +142,7 @@ using namespace std;
     goban->setGoishi(3, 0, BLACK);
     
     
-    goban->removeGoishi(0, 0, BLACK);
+    XCTAssertEqual(goban->removeGoishi(0, 0, BLACK), 3);
     
     XCTAssertEqual(goban->goban[0][0], NONE);
     XCTAssertEqual(goban->goban[1][0], NONE);
