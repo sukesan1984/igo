@@ -27,6 +27,9 @@ public:
     // すでに、石が置かれているかどうかを判定する。
     bool hasGoishi(int x, int y);
     
+    // 置かれた碁石の周りにとれる石があるかを返す。
+    bool hasCanGetGoishiAround(int x, int y);
+    
     //　置かれた碁石の周りをチェックして消すときは消す。
     void tryToRemoveAround(int x, int y, GOISHI color);
     

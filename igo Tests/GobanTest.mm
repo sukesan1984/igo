@@ -59,6 +59,45 @@ using namespace std;
     XCTAssertEqual(goban->canPutGoishi(1, 1, BLACK), false);
     goban->clearCheckBoard();
     XCTAssertEqual(goban->canPutGoishi(1, 1, WHITE), true);
+    
+    //四方を白で囲まれているけど、今回とれるので置ける。
+    Goban* goban1 = new Goban();
+    goban1->setGoishi(0, 1, WHITE);
+    goban1->setGoishi(2, 1, WHITE);
+    goban1->setGoishi(1, 0, WHITE);
+    goban1->setGoishi(1, 2, WHITE);
+    
+    goban1->setGoishi(2, 0, BLACK);
+    goban1->setGoishi(3, 1, BLACK);
+    goban1->setGoishi(2, 2, BLACK);
+    
+    XCTAssertEqual(goban1->canPutGoishi(1, 1, BLACK) ,true);
+    
+    Goban* goban2 = new Goban();
+    goban2->setGoishi(1, 0, WHITE);
+    goban2->setGoishi(2, 0, BLACK);
+    goban2->setGoishi(0, 1, WHITE);
+    goban2->setGoishi(1, 1, WHITE);
+    goban2->setGoishi(2, 1, BLACK);
+    goban2->setGoishi(0, 2, BLACK);
+    goban2->setGoishi(1, 2, BLACK);
+    
+    XCTAssertEqual(goban2->canPutGoishi(0, 0, WHITE), false);
+}
+
+- (void) testHasCanGetGoishiAround{
+    Goban* goban1 = new Goban();
+    goban1->setGoishi(0, 1, WHITE);
+    goban1->setGoishi(2, 1, WHITE);
+    goban1->setGoishi(1, 0, WHITE);
+    goban1->setGoishi(1, 2, WHITE);
+    
+    goban1->setGoishi(2, 0, BLACK);
+    goban1->setGoishi(3, 1, BLACK);
+    goban1->setGoishi(2, 2, BLACK);
+    goban1->setGoishi(1, 1, BLACK);
+    
+    XCTAssertEqual(goban1->hasCanGetGoishiAround(1, 1), true);
 }
 
 - (void)testUnsetGoishi{

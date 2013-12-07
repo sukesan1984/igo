@@ -199,16 +199,57 @@ bool Goban::canPutGoishi(int x, int y, GOISHI color){
     }
     //試しに置く。
     this->setGoishi(x, y, color);
-    
+
+    // 置いた先に呼吸点があれば、置ける。
     this->clearCheckBoard();
     if( this->hasKokyuAround(x, y, this->getGoishi(x, y))){
         this->clearCheckBoard();
         //仮置きしたものをとってから、置けるよと返す。
         this->unsetGoishi(x, y);
         return true;
+    } else {
+    //置いた先に呼吸点が無くても、周りにとれる石があれば、置ける。
+        if(this->hasCanGetGoishiAround(x, y)){
+            this->unsetGoishi(x, y);
+            return true;
+        }
     }
     this->clearCheckBoard();
     this->unsetGoishi(x, y);
+    return false;
+}
+
+bool Goban::hasCanGetGoishiAround(int x, int y){
+    GOISHI color = this->getGoishi(x, y);
+    //色が違うところだけ見る。
+    //左をチェック
+    if(x > 0 && color != this->getGoishi(x - 1, y)){
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x - 1, y, this->getGoishi(x - 1, y))){
+            return true;
+        }
+    }
+    if(x < BAN_SIZE - 1 && color != this->getGoishi(x + 1, y)){
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x + 1, y, this->getGoishi(x + 1, y))){
+            return true;
+        }
+    }
+    
+    if(y > 0 && color != this->getGoishi(x, y - 1)) {
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x, y - 1, this->getGoishi(x, y - 1))){
+            return true;
+        }
+    }
+    
+    if(y < BAN_SIZE - 1 && color != this->getGoishi(x, y + 1)) {
+        this->clearCheckBoard();
+        if(!this->hasKokyuAround(x, y + 1, this->getGoishi(x, y + 1))){
+            return true;
+        }
+    }
+    
     return false;
 }
 
