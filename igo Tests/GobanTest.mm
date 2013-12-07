@@ -41,6 +41,44 @@ using namespace std;
     }
 }
 
+- (void)testCanPutGoishi{
+    // すでに石が置かれているところには置けない。
+    Goban* goban0 = new Goban();
+    goban0->setGoishi(0, 0, WHITE);
+    XCTAssertEqual(goban0->canPutGoishi(0, 0, WHITE), false);
+    goban0->clearCheckBoard();
+    XCTAssertEqual(goban0->canPutGoishi(0, 0, BLACK), false);
+    
+    
+    //四方を白で囲まれているので、黒は置けない。白は置ける。
+    Goban* goban = new Goban();
+    goban->setGoishi(0, 1, WHITE);
+    goban->setGoishi(2, 1, WHITE);
+    goban->setGoishi(1, 0, WHITE);
+    goban->setGoishi(1, 2, WHITE);
+    XCTAssertEqual(goban->canPutGoishi(1, 1, BLACK), false);
+    goban->clearCheckBoard();
+    XCTAssertEqual(goban->canPutGoishi(1, 1, WHITE), true);
+}
+
+- (void)testUnsetGoishi{
+    Goban* goban = new Goban();
+    goban->setGoishi(0, 0, WHITE);
+    goban->unsetGoishi(0, 0);
+    
+    XCTAssertEqual(goban->getGoishi(0, 0), NONE);
+}
+
+- (void) testGetGoishi{
+    Goban* goban = new Goban();
+    goban->setGoishi(0, 0, WHITE);
+    goban->setGoishi(0, 2, BLACK);
+    
+    XCTAssertEqual(goban->getGoishi(0, 0), WHITE);
+    XCTAssertEqual(goban->getGoishi(0, 1), NONE);
+    XCTAssertEqual(goban->getGoishi(0, 2), BLACK);
+}
+
 - (void)testTryToRemoveAround
 {
     Goban* goban = new Goban();

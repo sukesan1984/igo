@@ -9,6 +9,7 @@
 #include "Goishi.h"
 
 Goishi::Goishi(){
+    this->color = NONE;
 }
 
 Goishi::~Goishi(){

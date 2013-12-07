@@ -10,6 +10,7 @@
 #define __igo__Goban__
 
 #include <iostream>
+#include <cassert>
 #include "Const.h"
 
 using namespace std;
@@ -20,6 +21,8 @@ public:
     bool checkBoard[BAN_SIZE][BAN_SIZE];
     // goban上にflagを立てる。
     void setGoishi(int x, int y, GOISHI goishi);
+    
+    void unsetGoishi(int x, int y);
     
     // すでに、石が置かれているかどうかを判定する。
     bool hasGoishi(int x, int y);
@@ -33,7 +36,11 @@ public:
     void removeGoishi(int x, int y, GOISHI color);
     
     void clearCheckBoard();
-    // 置かれた時に消える碁石があるのか。
+    
+    //着手禁止点かどうかを判定する。
+    bool canPutGoishi(int x, int y, GOISHI color);
+    
+    GOISHI getGoishi(int x, int y);
     
     Goban();
     ~Goban();

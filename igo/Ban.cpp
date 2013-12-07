@@ -21,6 +21,7 @@ Ban* Ban::create(const char *pszFileName)
                 ishi->setPosition(pobSprite->getPos(i, j));
                 ishi->setScale(pobSprite->getScale());
                 ishi->setVisible(false);
+                ishi->show(NONE);
                 pobSprite->addChild(ishi);
                 pobSprite->sprites[i][j] = ishi;
             }
@@ -36,11 +37,11 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
     CCAssert(goishi, "WHITE or BLACK must be defined");
-    if (this->goban->hasGoishi(x, y)){
+    if (!this->goban->canPutGoishi(x, y, goishi)){
         return false;
     }
     this->goban->setGoishi(x, y, goishi);
-    this->goban->tryToRemoveAround(x, y, this->goban->goban[x][y]);
+    this->goban->tryToRemoveAround(x, y, this->goban->getGoishi(x, y));
     this->update();
     
     return true;
@@ -103,7 +104,7 @@ void Ban::update(){
    for (int i = 0; i < BAN_SIZE; i++){
         for (int j = 0; j < BAN_SIZE; j++){
             Goishi* ishi = this->sprites[i][j];
-            GOISHI color = this->goban->goban[i][j];
+            GOISHI color = this->goban->getGoishi(i, j);
             ishi->show(color);
         }
    }
