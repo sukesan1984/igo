@@ -27,6 +27,14 @@
     [super tearDown];
 }
 
+- (void)testCreateWithPositionAndColor
+{
+    Te* te = Te::createWithPositionAndColor(0, 1, WHITE);
+    XCTAssertEqual(te->getX(), 0);
+    XCTAssertEqual(te->getY(), 1);
+    XCTAssertEqual(te->getColor(), WHITE);
+}
+
 - (void)testNew
 {
     Te* te = new Te(0, 1, WHITE);
@@ -34,8 +42,8 @@
     XCTAssertEqual(te->getY(), 1);
     XCTAssertEqual(te->getColor(), WHITE);
     
-    XCTAssertThrows(new Te(9, 0, WHITE),"over ban size");
-    XCTAssertThrows(new Te(0, 9, BLACK),"over ban size");
+    //XCTAssertThrows(new Te(9, 0, WHITE),"over ban size");
+    //XCTAssertThrows(new Te(0, 9, BLACK),"over ban size");
 }
 
 

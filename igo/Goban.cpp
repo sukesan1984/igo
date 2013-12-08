@@ -8,7 +8,29 @@
 
 #include "Goban.h"
 
+History* Goban::getHistory(){
+    return this->history;
+}
+
 void Goban::setGoishi(int x, int y, GOISHI goishi){
+    this->setGoishiKari(x, y, goishi);
+    this->history->pushTe(Te::createWithPositionAndColor(x, y, goishi));
+}
+
+//実際において、取り除いたりもする。
+bool Goban::putGoishi(int x, int y, GOISHI color){
+    if (!this->canPutGoishi(x, y, color)){
+        return false;
+    }
+    
+    this->setGoishi(x, y, color);
+    int removedNum = this->tryToRemoveAround(x, y, this->getGoishi(x, y));
+    ((Te*)this->history->getLast())->setRemovedNum(removedNum);
+    
+    return true;
+}
+
+void Goban::setGoishiKari(int x, int y, GOISHI goishi){
     assert(goishi == WHITE || goishi == BLACK || goishi == NONE);
     assert(x >= 0 && x < BAN_SIZE );
     assert(y >= 0 && y < BAN_SIZE );
@@ -18,7 +40,7 @@ void Goban::setGoishi(int x, int y, GOISHI goishi){
 void Goban::unsetGoishi(int x, int y){
     assert(x >= 0 && x < BAN_SIZE );
     assert(y >= 0 && y < BAN_SIZE );
-    this->setGoishi(x, y, NONE);
+    this->setGoishiKari(x, y, NONE);
 }
 
 
@@ -38,6 +60,11 @@ GOISHI Goban::getGoishi(int x, int y){
 }
 
 Goban::Goban(){
+    history = History::create();
+    history->retain();
+    ko_x = -1;
+    ko_y = -1;
+    
     for(int i = 0; i < BAN_SIZE; i++){
         for (int j = 0; j < BAN_SIZE; j++){
             goban[i][j] = NONE;
@@ -96,8 +123,12 @@ int Goban::removeGoishi(int x, int y, GOISHI color){
     }
     this->checkBoard[x][y] = true;
     if(this->getGoishi(x, y) == color){
-        this->setGoishi(x, y, NONE);
+        this->setGoishiKari(x, y, NONE);
         removedNum++;
+        if(removedNum == 1){
+            ko_x = x;
+            ko_y = y;
+        }
     }
     
     //左
@@ -118,6 +149,12 @@ int Goban::removeGoishi(int x, int y, GOISHI color){
     if(y < (BAN_SIZE - 1) && this->getGoishi(x, y+1) == color){
         removedNum += this->removeGoishi(x, y+1, color);
     }
+    
+    if(removedNum > 1){
+        ko_x = -1;
+        ko_y = -1;
+    }
+    
     return removedNum;
 }
 
@@ -205,8 +242,16 @@ bool Goban::canPutGoishi(int x, int y, GOISHI color){
     if(this->hasGoishi(x, y)){
         return false;
     }
+    //前の手で取った数が1の時に、前の前の手と同じ場所には置けない。
+    Te* lastTe = this->history->getLast();
+    if(lastTe && lastTe->getRemovedNum() == 1){
+        if(ko_x ==x && ko_y == y ){
+            return false;
+        }
+    }
+    
     //試しに置く。
-    this->setGoishi(x, y, color);
+    this->setGoishiKari(x, y, color);
 
     // 置いた先に呼吸点があれば、置ける。
     this->clearCheckBoard();

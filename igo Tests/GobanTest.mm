@@ -41,6 +41,43 @@ using namespace std;
     }
 }
 
+- (void)testPutGoishi
+{
+    Goban* goban0 = new Goban();
+    //置ける。
+    XCTAssertEqual(goban0->putGoishi(0, 0, WHITE), true);
+    XCTAssertEqual(goban0->getGoishi(0, 0), WHITE);
+    
+    //置けない。
+    Goban* goban1 = new Goban();
+    goban1->putGoishi(1, 0, WHITE);
+    goban1->putGoishi(4, 4, BLACK);
+    goban1->putGoishi(0, 1, WHITE);
+    
+    XCTAssertEqual(goban1->putGoishi(0, 0, BLACK), false);
+    
+    //取って、数が保存される。
+    Goban* goban2 = new Goban();
+    goban2->putGoishi(1, 0, WHITE);
+    goban2->putGoishi(0, 0, BLACK);
+    XCTAssertEqual(goban2->putGoishi(0, 1, WHITE), true);
+    XCTAssertEqual(goban2->getHistory()->getLast()->getRemovedNum(), 1);
+}
+
+- (void)testSetGoishi
+{
+    Goban* goban = new Goban();
+    goban->setGoishi(0, 0, WHITE);
+    XCTAssertEqual(goban->getGoishi(0, 0), WHITE);
+}
+
+- (void)testSetGoishiKari
+{
+    Goban* goban = new Goban();
+    goban->setGoishiKari(0, 0, WHITE);
+    XCTAssertEqual(goban->getGoishi(0, 0), WHITE);
+}
+
 - (void)testCanPutGoishi{
     // すでに石が置かれているところには置けない。
     Goban* goban0 = new Goban();
@@ -83,6 +120,18 @@ using namespace std;
     goban2->setGoishi(1, 2, BLACK);
     
     XCTAssertEqual(goban2->canPutGoishi(0, 0, WHITE), false);
+    
+    //劫の時は、置けない。
+    Goban* goban3 = new Goban();
+    goban3->putGoishi(1, 0, WHITE);
+    goban3->putGoishi(2, 0, BLACK);
+    goban3->putGoishi(0, 1, WHITE);
+    goban3->putGoishi(3, 1, BLACK);
+    goban3->putGoishi(1, 2, WHITE);
+    goban3->putGoishi(2, 2, BLACK);
+    goban3->putGoishi(1, 1, BLACK);
+    XCTAssertEqual(goban3->putGoishi(2, 1, WHITE), true);
+    XCTAssertEqual(goban3->putGoishi(1, 1, BLACK), false);
 }
 
 - (void) testHasCanGetGoishiAround{

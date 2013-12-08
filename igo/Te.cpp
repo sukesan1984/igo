@@ -7,6 +7,22 @@
 //
 
 #include "Te.h"
+bool Te::init(){
+    return true;
+}
+
+Te* Te::createWithPositionAndColor(int x, int y, GOISHI color){
+   	Te * pRet = new Te(x, y, color);
+    if (pRet && pRet->init())
+    {
+        pRet->autorelease();
+    }
+    else
+    {
+        CC_SAFE_DELETE(pRet);
+    }
+	return pRet;
+}
 
 Te::Te(int x, int y, GOISHI color){
     assert(x >= 0 && x < BAN_SIZE);
@@ -14,13 +30,10 @@ Te::Te(int x, int y, GOISHI color){
     this->x = x;
     this->y = y;
     this->color = color;
+    this->removedNum = 0;
 }
 
 Te::~Te(){
-}
-
-GOISHI Te::getColor(){
-    return color;
 }
 
 int Te::getX(){
@@ -29,4 +42,17 @@ int Te::getX(){
 
 int Te::getY(){
     return y;
+}
+
+GOISHI Te::getColor(){
+    return color;
+}
+
+void Te::setRemovedNum(int removedNum){
+    this->removedNum = removedNum;
+    
+}
+
+int Te::getRemovedNum(){
+    return this->removedNum;
 }

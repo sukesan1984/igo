@@ -37,12 +37,7 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
     CCAssert(goishi, "WHITE or BLACK must be defined");
-    if (!this->goban->canPutGoishi(x, y, goishi)){
-        return false;
-    }
-    this->goban->setGoishi(x, y, goishi);
-    int removedNum = this->goban->tryToRemoveAround(x, y, this->goban->getGoishi(x, y));
-    CCLog("消えた:%d", removedNum);
+    this->goban->putGoishi(x, y, goishi);
     this->update();
     
     return true;

@@ -12,15 +12,30 @@
 #include <iostream>
 #include <cassert>
 #include "Const.h"
+#include "History.h"
+#include "Te.h"
 
 using namespace std;
 
 class Goban{
+    History* history;
+    //コウのときは抜かれた位置をを保存しておく。
+    int ko_x;
+    int ko_y;
 public:
     GOISHI goban[BAN_SIZE][BAN_SIZE]; //何も無い時はundef, WHITE, BLACKが入る。
+    History* getHistory();
+    
     bool checkBoard[BAN_SIZE][BAN_SIZE];
+    
     // goban上にflagを立てる。
     void setGoishi(int x, int y, GOISHI goishi);
+    
+    // 実際に置く。置けなかったらfalse
+    bool putGoishi(int x, int y, GOISHI color);
+
+    //仮置き
+    void setGoishiKari(int x, int y, GOISHI goishi);
     
     void unsetGoishi(int x, int y);
     
