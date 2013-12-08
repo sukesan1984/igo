@@ -23,7 +23,7 @@ class Ban : public CCSprite {
     CCDictionary* banmen;
     Goishi* sprites[BAN_SIZE][BAN_SIZE];
 public:
-    static Ban* create(const char *pszFileName);
+    static Ban* create(const char *pszFileName, Goban* goban);
     // 置く候補を立てる。
     // 候補があれば候補の位置に石を置く。
     // 座標に石（黒 or 白)を置く。置けたら:true, 置けなかったら:false
@@ -31,14 +31,13 @@ public:
     // 候補を表示する。
     bool showCandidate(int x, int y);
     
-    
     void onTouchStart(CCTouch* touch);
     void onTouchMove(CCTouch* touch);
     
     CCPoint getPos(int x, int y);
     CCPoint getTouchedPos(CCPoint touchedLocation);
     void update(); //盤面を更新する。
-    Ban();
+    Ban(Goban* goban);
     ~Ban();
 };
 

@@ -8,9 +8,9 @@
 
 #include "Ban.h"
 
-Ban* Ban::create(const char *pszFileName)
+Ban* Ban::create(const char *pszFileName, Goban* goban)
 {
-    Ban *pobSprite = new Ban();
+    Ban *pobSprite = new Ban(goban);
     if (pobSprite && pobSprite->initWithFile(pszFileName))
     {
         //最初に全てスプライトは作ってしまう。
@@ -37,7 +37,9 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
     CCAssert(goishi, "WHITE or BLACK must be defined");
-    this->goban->putGoishi(x, y, goishi);
+    if(!this->goban->putGoishi(x, y, goishi)){
+        return false;
+    }
     this->update();
     
     return true;
@@ -106,9 +108,9 @@ void Ban::update(){
    }
 }
 
-Ban::Ban(){
-    turn = 0;
-    goban = new Goban();
+Ban::Ban(Goban* goban){
+    this->turn = 0;
+    this->goban = goban;
 }
 
 Ban::~Ban(){

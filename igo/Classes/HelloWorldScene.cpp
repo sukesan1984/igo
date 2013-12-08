@@ -64,18 +64,37 @@ bool HelloWorld::init()
     this->addChild(pLabel, 1);
 
     // add "HelloWorld" splash screen"
-    ban = Ban::create("ban.png");
+    goban = new Goban();
+    ban = Ban::create("ban.png", goban);
     // position the sprite on the center of the screen
     ban->setPosition( ccp(size.width/2, size.height/2) );
     ban->setScale(0.55);
+    
+    kuroAgehama = CCLabelTTF::create(CCString::createWithFormat("黒: %d", goban->getAgehamaKuro() )->getCString(), "Thonburi", 20);
+    kuroAgehama->setPosition(ccp(20, size.height - 100));
+    kuroAgehama->setAnchorPoint(ccp(0,0));
+    this->addChild(kuroAgehama);
+    
+       
+    shiroAgehama = CCLabelTTF::create(CCString::createWithFormat("白: %d", goban->getAgehamaShiro())->getCString(), "Thonburi", 20);
+    shiroAgehama->setPosition(ccp(size.width - 20, 70));
+    shiroAgehama->setAnchorPoint(ccp(1,0));
+    this->addChild(shiroAgehama);
    
     // add the sprite as a child to this layer
     this->addChild(ban);
     
+    this->schedule(schedule_selector(HelloWorld::update));
     this->setTouchEnabled(true);
     
     return true;
 }
+
+void HelloWorld::update(){
+    kuroAgehama->setString(CCString::createWithFormat("黒: %d", goban->getAgehamaKuro())->getCString());
+    shiroAgehama->setString(CCString::createWithFormat("白: %d", goban->getAgehamaShiro())->getCString());
+}
+
 
 void HelloWorld::ccTouchesBegan(CCSet* pTouches, CCEvent* event){
     CCSetIterator i;

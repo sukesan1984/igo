@@ -62,6 +62,7 @@ using namespace std;
     goban2->putGoishi(0, 0, BLACK);
     XCTAssertEqual(goban2->putGoishi(0, 1, WHITE), true);
     XCTAssertEqual(goban2->getHistory()->getLast()->getRemovedNum(), 1);
+    XCTAssertEqual(goban2->getAgehamaShiro(), 1);
 }
 
 - (void)testSetGoishi

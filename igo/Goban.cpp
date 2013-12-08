@@ -12,6 +12,14 @@ History* Goban::getHistory(){
     return this->history;
 }
 
+int Goban::getAgehamaKuro(){
+    return agehamaKuro->get();
+}
+
+int Goban::getAgehamaShiro(){
+    return agehamaShiro->get();
+}
+
 void Goban::setGoishi(int x, int y, GOISHI goishi){
     this->setGoishiKari(x, y, goishi);
     this->history->pushTe(Te::createWithPositionAndColor(x, y, goishi));
@@ -26,6 +34,16 @@ bool Goban::putGoishi(int x, int y, GOISHI color){
     this->setGoishi(x, y, color);
     int removedNum = this->tryToRemoveAround(x, y, this->getGoishi(x, y));
     ((Te*)this->history->getLast())->setRemovedNum(removedNum);
+    switch (color) {
+        case WHITE:
+            agehamaShiro->increase(removedNum);
+            break;
+        case BLACK:
+            agehamaKuro->increase(removedNum);
+            break;
+        default:
+            break;
+    }
     
     return true;
 }
@@ -62,8 +80,10 @@ GOISHI Goban::getGoishi(int x, int y){
 Goban::Goban(){
     history = History::create();
     history->retain();
-    ko_x = -1;
-    ko_y = -1;
+    koX = -1;
+    koY = -1;
+    agehamaKuro  = new Agehama();
+    agehamaShiro = new Agehama();
     
     for(int i = 0; i < BAN_SIZE; i++){
         for (int j = 0; j < BAN_SIZE; j++){
@@ -126,8 +146,8 @@ int Goban::removeGoishi(int x, int y, GOISHI color){
         this->setGoishiKari(x, y, NONE);
         removedNum++;
         if(removedNum == 1){
-            ko_x = x;
-            ko_y = y;
+            koX = x;
+            koY = y;
         }
     }
     
@@ -151,8 +171,8 @@ int Goban::removeGoishi(int x, int y, GOISHI color){
     }
     
     if(removedNum > 1){
-        ko_x = -1;
-        ko_y = -1;
+        koX = -1;
+        koY = -1;
     }
     
     return removedNum;
@@ -245,7 +265,7 @@ bool Goban::canPutGoishi(int x, int y, GOISHI color){
     //前の手で取った数が1の時に、前の前の手と同じ場所には置けない。
     Te* lastTe = this->history->getLast();
     if(lastTe && lastTe->getRemovedNum() == 1){
-        if(ko_x ==x && ko_y == y ){
+        if(koX ==x && koY == y ){
             return false;
         }
     }

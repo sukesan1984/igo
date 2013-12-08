@@ -7,7 +7,10 @@
 
 class HelloWorld : public cocos2d::CCLayer
 {
+    Goban* goban;
     Ban* ban;
+    CCLabelTTF* kuroAgehama;
+    CCLabelTTF* shiroAgehama;
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
     virtual bool init();
@@ -22,6 +25,7 @@ public:
     void ccTouchesMoved(cocos2d::CCSet* pTouches, cocos2d::CCEvent* event);
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
+    void update();
     CREATE_FUNC(HelloWorld);
 };
 

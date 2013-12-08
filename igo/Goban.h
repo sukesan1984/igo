@@ -14,17 +14,22 @@
 #include "Const.h"
 #include "History.h"
 #include "Te.h"
+#include "Agehama.h"
 
 using namespace std;
 
 class Goban{
     History* history;
     //コウのときは抜かれた位置をを保存しておく。
-    int ko_x;
-    int ko_y;
+    int koX;
+    int koY;
+    Agehama* agehamaKuro;
+    Agehama* agehamaShiro;
 public:
     GOISHI goban[BAN_SIZE][BAN_SIZE]; //何も無い時はundef, WHITE, BLACKが入る。
     History* getHistory();
+    int getAgehamaKuro();
+    int getAgehamaShiro();
     
     bool checkBoard[BAN_SIZE][BAN_SIZE];
     

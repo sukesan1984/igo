@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2514A23618548FD900DEA0D3 /* Agehama.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2514A23418548FD900DEA0D3 /* Agehama.cpp */; };
 		259B45BB184E19A600E79F42 /* Goban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259B45B9184E19A600E79F42 /* Goban.cpp */; };
 		259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 259B45BC184E201B00E79F42 /* GobanTest.mm */; };
 		259C6E651850B14D006D7D28 /* goishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 259C6E641850B14D006D7D28 /* goishi.png */; };
@@ -320,6 +321,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2514A23418548FD900DEA0D3 /* Agehama.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Agehama.cpp; sourceTree = "<group>"; };
+		2514A23518548FD900DEA0D3 /* Agehama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agehama.h; sourceTree = "<group>"; };
 		259B45B9184E19A600E79F42 /* Goban.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Goban.cpp; sourceTree = "<group>"; };
 		259B45BA184E19A600E79F42 /* Goban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goban.h; sourceTree = "<group>"; };
 		259B45BC184E201B00E79F42 /* GobanTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GobanTest.mm; sourceTree = "<group>"; };
@@ -2193,6 +2196,8 @@
 				25A5A780185430C6001A548B /* Te.h */,
 				25A5A785185436FD001A548B /* History.cpp */,
 				25A5A786185436FD001A548B /* History.h */,
+				2514A23418548FD900DEA0D3 /* Agehama.cpp */,
+				2514A23518548FD900DEA0D3 /* Agehama.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2363,6 +2368,7 @@
 				25A3FA1E184C9473004E739F /* CCLayerColorLoader.cpp in Sources */,
 				25A3F8B0184C9471004E739F /* CCTransition.cpp in Sources */,
 				25A3F8BA184C9471004E739F /* CCMenu.cpp in Sources */,
+				2514A23618548FD900DEA0D3 /* Agehama.cpp in Sources */,
 				25A3FAE7184C9475004E739F /* Slot.cpp in Sources */,
 				25A3F9EC184C9473004E739F /* SimpleAudioEngine_objc.m in Sources */,
 				25A3FAC0184C9474004E739F /* Attachment.cpp in Sources */,

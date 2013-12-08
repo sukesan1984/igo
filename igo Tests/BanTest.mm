@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Ban.h"
+#import "Goban.h"
 
 @interface BanTest : XCTestCase
 
@@ -30,7 +31,8 @@
 
 - (void)testGetTouchedPos
 {
-    Ban* ban = Ban::create("ban.png");
+    Goban* goban = new Goban();
+    Ban* ban = Ban::create("ban.png", goban);
     ban->setScale(0.55);
     
     XCTAssertEqual(CCPoint(0, 0), ban->getTouchedPos(ccp(19.2, 99.2)));
