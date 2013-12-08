@@ -22,6 +22,7 @@ public:
     Te* getTe(int tekazu);
     Te* getLast();
     Te* getBeforeLast();//2個前
+    void pushPass();
     CREATE_FUNC(History);
 };
 

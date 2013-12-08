@@ -66,6 +66,9 @@ public:
     
     GOISHI getGoishi(int x, int y);
     
+    // passする。
+    void pass();
+    
     Goban();
     ~Goban();
 };

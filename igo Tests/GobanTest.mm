@@ -41,6 +41,13 @@ using namespace std;
     }
 }
 
+- (void)testPass
+{
+    Goban* goban = new Goban();
+    goban->pass();
+    XCTAssertEqual(goban->getHistory()->getLast()->isPass(), true);
+}
+
 - (void)testPutGoishi
 {
     Goban* goban0 = new Goban();

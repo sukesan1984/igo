@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2514A23618548FD900DEA0D3 /* Agehama.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2514A23418548FD900DEA0D3 /* Agehama.cpp */; };
-		2583C7C01854A66E00AA5735 /* goishi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2583C7BE1854A66E00AA5735 /* goishi.plist */; };
-		2583C7C11854A66E00AA5735 /* goishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2583C7BF1854A66E00AA5735 /* goishi.png */; };
+		2529892B1854B3E2001CD0AE /* goishi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 252989291854B3E2001CD0AE /* goishi.plist */; };
+		2529892C1854B3E2001CD0AE /* goishi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2529892A1854B3E2001CD0AE /* goishi.png */; };
 		259B45BB184E19A600E79F42 /* Goban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 259B45B9184E19A600E79F42 /* Goban.cpp */; };
 		259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 259B45BC184E201B00E79F42 /* GobanTest.mm */; };
 		25A3F7B7184C9470004E739F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A3F7B6184C9470004E739F /* QuartzCore.framework */; };
@@ -323,8 +323,8 @@
 /* Begin PBXFileReference section */
 		2514A23418548FD900DEA0D3 /* Agehama.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Agehama.cpp; sourceTree = "<group>"; };
 		2514A23518548FD900DEA0D3 /* Agehama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agehama.h; sourceTree = "<group>"; };
-		2583C7BE1854A66E00AA5735 /* goishi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = goishi.plist; sourceTree = "<group>"; };
-		2583C7BF1854A66E00AA5735 /* goishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goishi.png; sourceTree = "<group>"; };
+		252989291854B3E2001CD0AE /* goishi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = goishi.plist; sourceTree = "<group>"; };
+		2529892A1854B3E2001CD0AE /* goishi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goishi.png; sourceTree = "<group>"; };
 		259B45B9184E19A600E79F42 /* Goban.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Goban.cpp; sourceTree = "<group>"; };
 		259B45BA184E19A600E79F42 /* Goban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goban.h; sourceTree = "<group>"; };
 		259B45BC184E201B00E79F42 /* GobanTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GobanTest.mm; sourceTree = "<group>"; };
@@ -1029,8 +1029,8 @@
 				25A3F7CA184C9470004E739F /* CloseSelected.png */,
 				25A3FB8A184CB44A004E739F /* candidate.png */,
 				25A3F7CC184C9470004E739F /* Default.png */,
-				2583C7BE1854A66E00AA5735 /* goishi.plist */,
-				2583C7BF1854A66E00AA5735 /* goishi.png */,
+				252989291854B3E2001CD0AE /* goishi.plist */,
+				2529892A1854B3E2001CD0AE /* goishi.png */,
 				25A3F7D0184C9470004E739F /* Icon-72.png */,
 				25A3F7D2184C9470004E739F /* Icon-Small-50.png */,
 				25A3F7D4184C9470004E739F /* Icon-Small.png */,
@@ -2299,7 +2299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2583C7C11854A66E00AA5735 /* goishi.png in Resources */,
+				2529892C1854B3E2001CD0AE /* goishi.png in Resources */,
 				25A3F7D9184C9470004E739F /* Icon.png in Resources */,
 				25A3FB64184C9987004E739F /* ban.png in Resources */,
 				25A3FB7E184CA541004E739F /* kuro.png in Resources */,
@@ -2310,7 +2310,7 @@
 				25A3FB7F184CA541004E739F /* shiro.png in Resources */,
 				25A3F7D3184C9470004E739F /* Icon-Small-50.png in Resources */,
 				25A3F7DD184C9470004E739F /* iTunesArtwork in Resources */,
-				2583C7C01854A66E00AA5735 /* goishi.plist in Resources */,
+				2529892B1854B3E2001CD0AE /* goishi.plist in Resources */,
 				25A3F7D7184C9470004E739F /* Icon-Small@2x.png in Resources */,
 				25A3F7CD184C9470004E739F /* Default.png in Resources */,
 				25A3F7CB184C9470004E739F /* CloseSelected.png in Resources */,

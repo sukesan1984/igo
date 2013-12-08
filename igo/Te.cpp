@@ -24,6 +24,23 @@ Te* Te::createWithPositionAndColor(int x, int y, GOISHI color){
 	return pRet;
 }
 
+Te* Te::createPass(){
+    Te* pRet = new Te();
+    if (pRet && pRet->init())
+    {
+        pRet->autorelease();
+    }
+    else
+    {
+        CC_SAFE_DELETE(pRet);
+    }
+	return pRet;
+}
+
+bool Te::isPass(){
+    return this->pass;
+}
+
 Te::Te(int x, int y, GOISHI color){
     assert(x >= 0 && x < BAN_SIZE);
     assert(y >= 0 && y < BAN_SIZE);
@@ -31,6 +48,15 @@ Te::Te(int x, int y, GOISHI color){
     this->y = y;
     this->color = color;
     this->removedNum = 0;
+    this->pass = false;
+}
+
+Te::Te(){
+    this->x = -1;
+    this->y = -1;
+    this->color = NONE;
+    this->removedNum = 0;
+    this->pass = true;
 }
 
 Te::~Te(){

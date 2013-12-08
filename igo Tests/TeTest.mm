@@ -42,8 +42,22 @@
     XCTAssertEqual(te->getY(), 1);
     XCTAssertEqual(te->getColor(), WHITE);
     
+    
+    Te* te1 = new Te();
+    XCTAssertEqual(te1->getX(), -1);
+    XCTAssertEqual(te1->getY(), -1);
+    XCTAssertEqual(te1->getColor(), NONE);
+    
     //XCTAssertThrows(new Te(9, 0, WHITE),"over ban size");
     //XCTAssertThrows(new Te(0, 9, BLACK),"over ban size");
+}
+- (void)testIsPass
+{
+    Te* te = new Te(0, 1, WHITE);
+    XCTAssertEqual(te->isPass(), false);
+    
+    Te* te1 = new Te();
+    XCTAssertEqual(te1->isPass(), true);
 }
 
 

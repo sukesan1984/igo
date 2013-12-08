@@ -22,6 +22,7 @@ class Te : public CCObject{
     GOISHI color;
     bool init();
     int removedNum;
+    bool pass;
 public:
     int getX();
     int getY();
@@ -29,7 +30,10 @@ public:
     void setRemovedNum(int removedNum);
     int getRemovedNum();
     static Te* createWithPositionAndColor(int x, int y, GOISHI color);
+    static Te* createPass();
+    bool isPass();
     Te(int x, int y, GOISHI color);
+    Te();
     ~Te();
 };
 

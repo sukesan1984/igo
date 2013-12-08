@@ -326,5 +326,9 @@ bool Goban::hasCanGetGoishiAround(int x, int y){
     return false;
 }
 
+void Goban::pass(){
+    this->history->pushPass();
+}
+
 Goban::~Goban(){
 }
