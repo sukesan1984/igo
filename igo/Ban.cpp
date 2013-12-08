@@ -71,6 +71,10 @@ void Ban::onTouchStart(cocos2d::CCTouch *touch){
     CCLOG("onTouchStart");
     CCPoint tap = CCDirector::sharedDirector()->convertToGL( touch->getLocationInView() );
     CCPoint tapPos = this->getTouchedPos(tap);
+    //盤外なら何もしない。
+    if(tapPos.x < 0 || tapPos.x > BAN_SIZE -1 || tapPos.y < 0 || tapPos.y > BAN_SIZE - 1){
+        return;
+    }
     GOISHI type;
     if(turn % 2){
         type = WHITE;
