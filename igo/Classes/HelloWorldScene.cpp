@@ -42,8 +42,20 @@ bool HelloWorld::init()
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("goishi.plist");
     pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
 
+    // ask director the window size
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
+          
+    CCSprite* pass = CCSprite::createWithSpriteFrameName("pass.png");
+    CCSprite* passOff = CCSprite::createWithSpriteFrameName("pass.png");
+    passOff->setColor(ccc3(102,102,102));
+    pPassButton =
+        CCMenuItemSprite::create(pass, passOff, this, menu_selector(HelloWorld::pass));
+    pPassButton->setScale(0.5);
+    pPassButton->setPosition(ccp(size.width/2, 70));
+    pPassButton->setVisible(true);
+    
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
+    CCMenu* pMenu = CCMenu::create(pCloseItem, pPassButton, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
@@ -54,8 +66,6 @@ bool HelloWorld::init()
     // create and initialize a label
     CCLabelTTF* pLabel = CCLabelTTF::create("Go World", "Thonburi", 34);
 
-    // ask director the window size
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
 
     // position the label on the center of the screen
     pLabel->setPosition( ccp(size.width / 2, size.height - 20) );
@@ -80,8 +90,9 @@ bool HelloWorld::init()
     shiroAgehama->setPosition(ccp(size.width - 20, 70));
     shiroAgehama->setAnchorPoint(ccp(1,0));
     this->addChild(shiroAgehama);
-   
-    // add the sprite as a child to this layer
+    
+    
+   // add the sprite as a child to this layer
     this->addChild(ban);
     
     this->schedule(schedule_selector(HelloWorld::update));
@@ -119,6 +130,10 @@ void HelloWorld::ccTouchesMoved(CCSet* pTouches, CCEvent* event){
             ban->onTouchMove(touch);
         }
     }
+}
+
+void HelloWorld::pass(){
+    ban->pass();
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)

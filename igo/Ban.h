@@ -33,6 +33,7 @@ public:
     
     void onTouchStart(CCTouch* touch);
     void onTouchMove(CCTouch* touch);
+    void pass();
     
     CCPoint getPos(int x, int y);
     CCPoint getTouchedPos(CCPoint touchedLocation);

@@ -7,7 +7,7 @@
             <key>candidate.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,134},{64,64}}</string>
+                <string>{{68,92},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>kuro.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,68},{64,64}}</string>
+                <string>{{2,158},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -30,10 +30,23 @@
                 <key>sourceSize</key>
                 <string>{64,64}</string>
             </dict>
+            <key>pass.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{247,88}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{247,88}}</string>
+                <key>sourceSize</key>
+                <string>{247,88}</string>
+            </dict>
             <key>shiro.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{64,64}}</string>
+                <string>{{2,92},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -51,9 +64,9 @@
             <key>realTextureFileName</key>
             <string>goishi.png</string>
             <key>size</key>
-            <string>{128,256}</string>
+            <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c8261e4030bccbea005c086116d4c9aa:4910f40b92ecf0223aa128ac7e4c765e:cf282022131b8914ef6e31c730069b8f$</string>
+            <string>$TexturePacker:SmartUpdate:b8912abe900ea4d0a8f8878e74f8a0bb:53b3ffd088670814af27a9a1acdfa188:cf282022131b8914ef6e31c730069b8f$</string>
             <key>textureFileName</key>
             <string>goishi.png</string>
         </dict>

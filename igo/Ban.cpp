@@ -86,6 +86,10 @@ void Ban::onTouchMove(cocos2d::CCTouch *touch){
     CCLOG("onTouchMove");
 }
 
+void Ban::pass(){
+    turn++;
+}
+
 CCPoint Ban::getTouchedPos(cocos2d::CCPoint touchedLocation){
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     float scale = this->getScale();
