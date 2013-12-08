@@ -17,11 +17,14 @@ using namespace cocos2d;
 
 class Goishi : public CCSprite{
     GOISHI color;
+    CCSprite* batsu;
+    bool dead;
 public:
     static Goishi* create();
     void setImage(GOISHI color);
     void show(GOISHI color);//colorの色を表示する。
     void hide();
+    void changeDead();
     Goishi();
     ~Goishi();
 };

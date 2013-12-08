@@ -10,6 +10,7 @@
 
 Goishi::Goishi(){
     this->color = NONE;
+    this->dead = false;
 }
 
 Goishi::~Goishi(){
@@ -20,6 +21,10 @@ Goishi* Goishi::create()
     Goishi *pobSprite = new Goishi();
     if (pobSprite && pobSprite->init())
     {
+        CCSprite* batsu = CCSprite::createWithSpriteFrameName("batsu.png");
+        batsu->setVisible(false);
+        pobSprite->batsu = batsu;
+        pobSprite->addChild(batsu);
         pobSprite->autorelease();
         return pobSprite;
     }
@@ -59,4 +64,10 @@ void Goishi::setImage(GOISHI color){
 
 void Goishi::hide(){
     this->setVisible(false);
+}
+
+void Goishi::changeDead(){
+    this->dead = !(this->dead);
+    this->batsu->setPosition(ccp(this->getContentSize().width/2, this->getContentSize().height/2));
+    this->batsu->setVisible(this->dead);
 }

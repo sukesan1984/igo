@@ -19,4 +19,9 @@ enum Const {
     BAN_SIZE = 9
 };
 
+enum GAMEMODE{
+    PLAY = 1,
+    CHECK_SHI = 2
+};
+
 #endif

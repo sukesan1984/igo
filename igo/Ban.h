@@ -23,16 +23,21 @@ class Ban : public CCSprite {
     CCDictionary* banmen;
     Goishi* sprites[BAN_SIZE][BAN_SIZE];
     float OFFSET = 20;
+    GAMEMODE mode;
 public:
     static Ban* create(const char *pszFileName, Goban* goban);
     // 置く候補を立てる。
     // 候補があれば候補の位置に石を置く。
     // 座標に石（黒 or 白)を置く。置けたら:true, 置けなかったら:false
     bool putGoishi(int x, int y, GOISHI goishi);
+    //死んでる石をチェックする
+    bool makeGoishiDead(int x, int y);
     // 候補を表示する。
     bool showCandidate(int x, int y);
     
     void onTouchStart(CCTouch* touch);
+    void onTouchOnPlayMode(CCTouch* touch);
+    void onTouchOnCheckShi(CCTouch* touch);
     void onTouchMove(CCTouch* touch);
     void pass();
     

@@ -45,6 +45,9 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     return true;
 }
 
+bool Ban::makeGoishiDead(int x, int y){
+}
+
 bool Ban::showCandidate(int x, int y){
     CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
@@ -69,6 +72,17 @@ CCPoint Ban::getPos(int x, int y){
 
 void Ban::onTouchStart(cocos2d::CCTouch *touch){
     CCLOG("onTouchStart");
+    switch(this->mode){
+        case PLAY:
+            this->onTouchOnPlayMode(touch);
+            break;
+        case CHECK_SHI:
+            this->onTouchOnCheckShi(touch);
+            break;
+    }
+}
+
+void Ban::onTouchOnPlayMode(cocos2d::CCTouch *touch){
     CCPoint tap = CCDirector::sharedDirector()->convertToGL( touch->getLocationInView() );
     CCPoint tapPos = this->getTouchedPos(tap);
     //盤外なら何もしない。
@@ -86,11 +100,26 @@ void Ban::onTouchStart(cocos2d::CCTouch *touch){
     }
 }
 
+void Ban::onTouchOnCheckShi(cocos2d::CCTouch *touch){
+    CCLOG("死んでる石をチェックする");
+    CCPoint tap = CCDirector::sharedDirector()->convertToGL( touch->getLocationInView() );
+    CCPoint tapPos = this->getTouchedPos(tap);
+    //盤外なら何もしない。
+    if(tapPos.x < 0 || tapPos.x > BAN_SIZE -1 || tapPos.y < 0 || tapPos.y > BAN_SIZE - 1){
+        return;
+    }
+    this->sprites[(int) tapPos.x][(int) tapPos.y]->changeDead();
+}
+
 void Ban::onTouchMove(cocos2d::CCTouch *touch){
     CCLOG("onTouchMove");
 }
 
 void Ban::pass(){
+    if(this->goban->getHistory()->getLast()->isPass()){
+        mode = CHECK_SHI;
+    }
+    this->goban->pass();
     turn++;
 }
 
@@ -119,6 +148,7 @@ void Ban::update(){
 Ban::Ban(Goban* goban){
     this->turn = 0;
     this->goban = goban;
+    mode = PLAY;
 }
 
 Ban::~Ban(){
