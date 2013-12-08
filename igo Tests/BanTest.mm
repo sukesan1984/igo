@@ -33,7 +33,7 @@
 {
     Goban* goban = new Goban();
     Ban* ban = Ban::create("ban.png", goban);
-    ban->setScale(0.55);
+    //ban->setScale(0.55);
     
     XCTAssertEqual(CCPoint(0, 0), ban->getTouchedPos(ccp(19.2, 99.2)));
     XCTAssertEqual(CCPoint(4, 4), ban->getTouchedPos(ccp(160, 240)));

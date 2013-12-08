@@ -99,42 +99,42 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[BanTest testGetTouchedPos]"
-                  moduleName = "igo Tests"
+                  moduleName = "igoTests"
                   urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/BanTest.mm"
-                  timestampString = "407683193.566416"
+                  timestampString = "408202055.967615"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "1195">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1293">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[BanTest testGetTouchedPos]"
-                  moduleName = "igo Tests"
+                  moduleName = "igoTests"
                   urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/BanTest.mm"
-                  timestampString = "407683193.566935"
+                  timestampString = "408202055.968221"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "2721">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "2858">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[BanTest testGetTouchedPos]"
-                  moduleName = "igo Tests"
+                  moduleName = "igoTests"
                   urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/BanTest.mm"
-                  timestampString = "407683193.567417"
+                  timestampString = "408202055.968731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "2974">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "3111">
                </Location>
             </Locations>
          </BreakpointContent>

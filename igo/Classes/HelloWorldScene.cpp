@@ -51,7 +51,7 @@ bool HelloWorld::init()
     pPassButton =
         CCMenuItemSprite::create(pass, passOff, this, menu_selector(HelloWorld::pass));
     pPassButton->setScale(0.5);
-    pPassButton->setPosition(ccp(size.width/2, 70));
+    pPassButton->setPosition(ccp(size.width/2, 50));
     pPassButton->setVisible(true);
     
     // create menu, it's an autorelease object
@@ -78,16 +78,16 @@ bool HelloWorld::init()
     ban = Ban::create("ban.png", goban);
     // position the sprite on the center of the screen
     ban->setPosition( ccp(size.width/2, size.height/2) );
-    ban->setScale(0.55);
+    //ban->setScale(0.55);
     
     kuroAgehama = CCLabelTTF::create(CCString::createWithFormat("黒: %d", goban->getAgehamaKuro() )->getCString(), "Thonburi", 20);
-    kuroAgehama->setPosition(ccp(20, size.height - 100));
+    kuroAgehama->setPosition(ccp(20, size.height - 80));
     kuroAgehama->setAnchorPoint(ccp(0,0));
     this->addChild(kuroAgehama);
     
        
     shiroAgehama = CCLabelTTF::create(CCString::createWithFormat("白: %d", goban->getAgehamaShiro())->getCString(), "Thonburi", 20);
-    shiroAgehama->setPosition(ccp(size.width - 20, 70));
+    shiroAgehama->setPosition(ccp(size.width - 20, 50));
     shiroAgehama->setAnchorPoint(ccp(1,0));
     this->addChild(shiroAgehama);
     

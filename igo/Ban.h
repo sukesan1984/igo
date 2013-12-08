@@ -22,6 +22,7 @@ class Ban : public CCSprite {
     Goban* goban;
     CCDictionary* banmen;
     Goishi* sprites[BAN_SIZE][BAN_SIZE];
+    float OFFSET = 20;
 public:
     static Ban* create(const char *pszFileName, Goban* goban);
     // 置く候補を立てる。

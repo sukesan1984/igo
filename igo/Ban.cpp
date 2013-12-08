@@ -11,7 +11,7 @@
 Ban* Ban::create(const char *pszFileName, Goban* goban)
 {
     Ban *pobSprite = new Ban(goban);
-    if (pobSprite && pobSprite->initWithFile(pszFileName))
+    if (pobSprite && pobSprite->initWithSpriteFrameName(pszFileName))
     {
         //最初に全てスプライトは作ってしまう。
         for (int i = 0; i < BAN_SIZE; i++){
@@ -19,7 +19,7 @@ Ban* Ban::create(const char *pszFileName, Goban* goban)
                 Goishi* ishi = Goishi::create();
                 ishi->initWithSpriteFrameName("shiro.png");
                 ishi->setPosition(pobSprite->getPos(i, j));
-                ishi->setScale(pobSprite->getScale());
+                ishi->setScale(0.546875);
                 ishi->setVisible(false);
                 ishi->show(NONE);
                 pobSprite->addChild(ishi);
@@ -59,11 +59,11 @@ bool Ban::showCandidate(int x, int y){
 CCPoint Ban::getPos(int x, int y){
     CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
-    float width  = this->getContentSize().width;
-    float height = this->getContentSize().height;
+    float width  = this->getContentSize().width - (OFFSET * 2);
+    float height = this->getContentSize().height - (OFFSET * 2);
     
-    float posX = ( width / (BAN_SIZE - 1) ) * x;
-    float posY = ( height / (BAN_SIZE - 1) ) * y;
+    float posX = ( width / (BAN_SIZE - 1) ) * x + OFFSET;
+    float posY = ( height / (BAN_SIZE - 1) ) * y + OFFSET;
     return ccp(posX, posY);
 }
 
@@ -97,10 +97,10 @@ void Ban::pass(){
 CCPoint Ban::getTouchedPos(cocos2d::CCPoint touchedLocation){
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     float scale = this->getScale();
-    float offSetX = (size.width - this->getContentSize().width * scale) / 2;
-    float offSetY = (size.height - this->getContentSize().height * scale) / 2;
+    float offSetX = (size.width - this->getContentSize().width * scale) / 2 + OFFSET;
+    float offSetY = (size.height - this->getContentSize().height * scale) / 2 + OFFSET;
     
-    float masuSize = this->getContentSize().width * scale / (BAN_SIZE - 1);
+    float masuSize = (this->getContentSize().width - (OFFSET * 2)) * scale / (BAN_SIZE - 1);
     int X = round( (touchedLocation.x - offSetX) / masuSize );
     int Y = round( (touchedLocation.y - offSetY) / masuSize );
     return ccp(X, Y);
