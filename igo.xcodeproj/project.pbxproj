@@ -296,6 +296,11 @@
 		25A3FB89184CB3D7004E739F /* Candidate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB87184CB3D7004E739F /* Candidate.cpp */; };
 		25A3FB8B184CB44A004E739F /* candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A3FB8A184CB44A004E739F /* candidate.png */; };
 		25A3FB8D184CB519004E739F /* BanTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB8C184CB519004E739F /* BanTest.mm */; };
+		25A5A781185430C6001A548B /* Te.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A5A77F185430C6001A548B /* Te.cpp */; };
+		25A5A782185430C6001A548B /* Te.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A5A77F185430C6001A548B /* Te.cpp */; };
+		25A5A78418543243001A548B /* TeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 25A5A78318543243001A548B /* TeTest.mm */; };
+		25A5A787185436FD001A548B /* History.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A5A785185436FD001A548B /* History.cpp */; };
+		25A5A788185436FD001A548B /* History.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A5A785185436FD001A548B /* History.cpp */; };
 		25F9BD561850353800ED6440 /* Ban.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB80184CA8A3004E739F /* Ban.cpp */; };
 		25F9BD571850354400ED6440 /* Goishi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB83184CAB7F004E739F /* Goishi.cpp */; };
 		25F9BD581850354800ED6440 /* Candidate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25A3FB87184CB3D7004E739F /* Candidate.cpp */; };
@@ -926,6 +931,11 @@
 		25A3FB88184CB3D7004E739F /* Candidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Candidate.h; sourceTree = "<group>"; };
 		25A3FB8A184CB44A004E739F /* candidate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = candidate.png; sourceTree = "<group>"; };
 		25A3FB8C184CB519004E739F /* BanTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BanTest.mm; sourceTree = "<group>"; };
+		25A5A77F185430C6001A548B /* Te.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Te.cpp; sourceTree = "<group>"; };
+		25A5A780185430C6001A548B /* Te.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Te.h; sourceTree = "<group>"; };
+		25A5A78318543243001A548B /* TeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TeTest.mm; sourceTree = "<group>"; };
+		25A5A785185436FD001A548B /* History.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = History.cpp; sourceTree = "<group>"; };
+		25A5A786185436FD001A548B /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2177,6 +2187,10 @@
 				25A3FB88184CB3D7004E739F /* Candidate.h */,
 				259B45B9184E19A600E79F42 /* Goban.cpp */,
 				259B45BA184E19A600E79F42 /* Goban.h */,
+				25A5A77F185430C6001A548B /* Te.cpp */,
+				25A5A780185430C6001A548B /* Te.h */,
+				25A5A785185436FD001A548B /* History.cpp */,
+				25A5A786185436FD001A548B /* History.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2185,6 +2199,7 @@
 			isa = PBXGroup;
 			children = (
 				259B45BC184E201B00E79F42 /* GobanTest.mm */,
+				25A5A78318543243001A548B /* TeTest.mm */,
 				25A3FB8C184CB519004E739F /* BanTest.mm */,
 				25A3FB74184C9AF7004E739F /* igo_Tests.m */,
 				25A3FB6F184C9AF7004E739F /* Supporting Files */,
@@ -2523,6 +2538,7 @@
 				25A3F8C7184C9471004E739F /* CCProgressTimer.cpp in Sources */,
 				25A3F8D7184C9471004E739F /* CCParticleSystemQuad.cpp in Sources */,
 				25A3FAB1184C9474004E739F /* Animation.cpp in Sources */,
+				25A5A781185430C6001A548B /* Te.cpp in Sources */,
 				25A3FAD2184C9475004E739F /* extension.cpp in Sources */,
 				25A3FA58184C9474004E739F /* CCControlButton.cpp in Sources */,
 				25A3FB89184CB3D7004E739F /* Candidate.cpp in Sources */,
@@ -2564,6 +2580,7 @@
 				25A3FB18184C9475004E739F /* cpDampedRotarySpring.c in Sources */,
 				25A3FB5A184C9475004E739F /* AppDelegate.cpp in Sources */,
 				25A3F9C3184C9473004E739F /* CCTMXLayer.cpp in Sources */,
+				25A5A787185436FD001A548B /* History.cpp in Sources */,
 				25A3FA02184C9473004E739F /* CCBReader.cpp in Sources */,
 				25A3FA5B184C9474004E739F /* CCControlColourPicker.cpp in Sources */,
 			);
@@ -2573,12 +2590,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A5A782185430C6001A548B /* Te.cpp in Sources */,
 				259B45BD184E201B00E79F42 /* GobanTest.mm in Sources */,
+				25A5A788185436FD001A548B /* History.cpp in Sources */,
 				25F9BD581850354800ED6440 /* Candidate.cpp in Sources */,
 				25F9BD561850353800ED6440 /* Ban.cpp in Sources */,
 				25F9BD571850354400ED6440 /* Goishi.cpp in Sources */,
 				25F9BD591850354A00ED6440 /* Goban.cpp in Sources */,
 				25A3FB75184C9AF7004E739F /* igo_Tests.m in Sources */,
+				25A5A78418543243001A548B /* TeTest.mm in Sources */,
 				25A3FB8D184CB519004E739F /* BanTest.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
