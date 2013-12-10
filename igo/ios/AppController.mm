@@ -58,8 +58,22 @@ static AppDelegate s_sharedApplication;
     [window makeKeyAndVisible];
 
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
-
+    bannerView_ = [GADBannerView alloc];
+    CGPoint origin = CGPointMake( 0.0, self.viewController.view.frame.size.height - GAD_SIZE_320x50.height);
+    bannerView_ = [[[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin] autorelease];
+    
+    bannerView_.adUnitID = @"ca-app-pub-9321975971123036/743404753w0";
+    //    self.adBanner.delegate = self;
+    // viewに追加
+    [viewController.view addSubview: bannerView_];
+    [bannerView_ setRootViewController:viewController];
+    
+    GADRequest *request = [GADRequest request];
+    request.testing = YES;
+    [bannerView_ loadRequest:request];
     cocos2d::CCApplication::sharedApplication()->run();
+    
+
     return YES;
 }
 
