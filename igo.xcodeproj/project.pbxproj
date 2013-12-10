@@ -2315,6 +2315,9 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
+					25A3F7B2184C9470004E739F = {
+						DevelopmentTeam = BW226VS6RT;
+					};
 					25A3FB68184C9AF6004E739F = {
 						TestTargetID = 25A3F7B2184C9470004E739F;
 					};
@@ -2772,6 +2775,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3ED386CE-5DA6-41BA-9913-ACD50D068B5A";
 				USER_HEADER_SEARCH_PATHS = "\"igo/libs/Chipmunk/include/chipmunk\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2793,8 +2797,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios/libraries",
-					"\"$(PROJECT_NAME)/libs/libwebsockets/ios/lib",
+					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios/libraries\"",
+					"\"$(PROJECT_NAME)/libs/libwebsockets/ios/lib\"",
 					"\"$(PROJECT_NAME)/libs/GoogleAdMobAdsSdk",
 				);
 				OTHER_LDFLAGS = (
@@ -2805,6 +2809,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3ED386CE-5DA6-41BA-9913-ACD50D068B5A";
 				USER_HEADER_SEARCH_PATHS = "\"igo/libs/Chipmunk/include/chipmunk\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
