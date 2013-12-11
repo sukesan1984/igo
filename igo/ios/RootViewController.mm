@@ -46,6 +46,9 @@
 //    return UIInterfaceOrientationMaskLandscape;
 //#endif
 //}
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (BOOL) shouldAutorotate {
     return YES;
