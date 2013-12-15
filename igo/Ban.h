@@ -40,6 +40,8 @@ public:
     void onTouchOnCheckShi(CCTouch* touch);
     void onTouchMove(CCTouch* touch);
     void pass();
+    //死んでる石を取り除く。
+    void confirm();
     
     CCPoint getPos(int x, int y);
     CCPoint getTouchedPos(CCPoint touchedLocation);

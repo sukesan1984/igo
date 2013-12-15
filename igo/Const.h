@@ -24,4 +24,14 @@ enum GAMEMODE{
     CHECK_SHI = 2
 };
 
+struct Jinchi {
+   enum Value {
+        NONE  = 0,
+        WHITE = 1,
+        BLACK  = 2,
+        BLACK_STONE = 3,//黒石が置かれている。
+        WHITE_STONE = 4,//白石が置かれている。
+        DAME = 5,
+    };
+};
 #endif

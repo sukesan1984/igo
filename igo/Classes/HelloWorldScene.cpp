@@ -41,21 +41,35 @@ bool HelloWorld::init()
                                         menu_selector(HelloWorld::menuCloseCallback) );
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("goishi.plist");
     pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
+    
+    CCLayerColor *background = CCLayerColor::create(ccc4(250, 255 , 250, 122));
+    background->setContentSize(CCSizeMake(360, 40));
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
+    background->setPosition(ccp(0, size.height - 80));
+    this->addChild(background);
 
     // ask director the window size
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
-          
+    
     CCSprite* pass = CCSprite::createWithSpriteFrameName("pass.png");
     CCSprite* passOff = CCSprite::createWithSpriteFrameName("pass.png");
     passOff->setColor(ccc3(102,102,102));
     pPassButton =
         CCMenuItemSprite::create(pass, passOff, this, menu_selector(HelloWorld::pass));
-    pPassButton->setScale(0.5);
-    pPassButton->setPosition(ccp(size.width/2, 50));
+    pPassButton->setScale(0.4);
+    pPassButton->setPosition(ccp(size.width/4, 50));
     pPassButton->setVisible(true);
     
+    CCSprite* ok = CCSprite::createWithSpriteFrameName("ok.png");
+    CCSprite* okOff = CCSprite::createWithSpriteFrameName("ok.png");
+    okOff->setColor(ccc3(102,102,102));
+    pOkButton =
+        CCMenuItemSprite::create(ok, okOff, this, menu_selector(HelloWorld::ok));
+    pOkButton->setScale(0.4);
+    pOkButton->setPosition(ccp(size.width/4 * 2.5, 50));
+    pOkButton->setVisible(true);
+    
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, pPassButton, NULL);
+    CCMenu* pMenu = CCMenu::create(pCloseItem, pPassButton, pOkButton, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
@@ -124,6 +138,10 @@ void HelloWorld::ccTouchesMoved(CCSet* pTouches, CCEvent* event){
 
 void HelloWorld::pass(){
     ban->pass();
+}
+
+void HelloWorld::ok(){
+    
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)

@@ -174,6 +174,7 @@
             <filename>jinchiKuro.png</filename>
             <filename>jinchiShiro.png</filename>
             <filename>batsu.png</filename>
+            <filename>ok.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

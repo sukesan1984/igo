@@ -82,6 +82,19 @@
                 <key>sourceSize</key>
                 <string>{64,64}</string>
             </dict>
+            <key>ok.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{324,2},{162,88}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{162,88}}</string>
+                <key>sourceSize</key>
+                <string>{162,88}</string>
+            </dict>
             <key>pass.png</key>
             <dict>
                 <key>frame</key>
@@ -118,7 +131,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e7393d1ef333d0e78fec9efe42a7f6d5:f22b3b944d9ed4caaa37abbb1ec1b6a1:cf282022131b8914ef6e31c730069b8f$</string>
+            <string>$TexturePacker:SmartUpdate:6706d4adc32df252490ac9322e4a27bd:73a4be78864490f695c99783a25bf306:cf282022131b8914ef6e31c730069b8f$</string>
             <key>textureFileName</key>
             <string>goishi.png</string>
         </dict>

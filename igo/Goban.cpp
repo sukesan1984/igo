@@ -48,6 +48,114 @@ bool Goban::putGoishi(int x, int y, GOISHI color){
     return true;
 }
 
+Jinchi::Value Goban::calcJinchi(int x, int y) {
+    // 自身の陣地を保存する。
+    Jinchi::Value selfJinchi = this->getJinchi(x, y);
+    if(this->checkBoard[x][y]){
+        return selfJinchi;
+    }
+    this->checkBoard[x][y] = true;
+    // 自身の色を見る。
+    GOISHI selfColor = this->getGoishi(x, y);
+    
+    switch(selfColor){
+        case BLACK:
+            selfJinchi = Jinchi::BLACK_STONE;
+            break;
+        case WHITE:
+            selfJinchi = Jinchi::WHITE_STONE;
+            break;
+        default:
+            
+            // 右隣の陣地をチェックして、selfJinchiに突っ込む。
+            if(x < (BAN_SIZE -1)){
+                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x + 1, y));
+                this->setJinchi(x, y, selfJinchi);
+            }
+            
+            // 上の陣地をチェックして、selfJinchiに突っ込む。
+            if(y < (BAN_SIZE - 1)){
+                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x, y + 1));
+                this->setJinchi(x, y, selfJinchi);
+            }
+            // 下の陣地をチェックして、selfJinchiに突っ込む。
+            if(y > 0){
+                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x, y - 1));
+                this->setJinchi(x, y, selfJinchi);
+            }
+            // 左の陣地をチェックして、selfJinchiに突っ込む。
+            if(x > 0){
+                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x - 1, y));
+                this->setJinchi(x, y, selfJinchi);
+            }
+            
+    }
+    this->setJinchi(x, y, selfJinchi);
+    return selfJinchi;
+}
+
+Jinchi::Value Goban::getJinchi(int x, int y){
+    assert(x >= 0 && x < BAN_SIZE );
+    assert(y >= 0 && y < BAN_SIZE );
+    
+    return this->jinchi[x][y];
+}
+
+void Goban::setJinchi(int x, int y, Jinchi::Value jinchi){
+    assert(x >= 0 && x < BAN_SIZE );
+    assert(y >= 0 && y < BAN_SIZE );
+    
+    this->jinchi[x][y] = jinchi;
+}
+
+Jinchi::Value Goban::changeJinchiState(Jinchi::Value before, Jinchi::Value after){
+    switch(before){
+        case Jinchi::NONE:
+            switch(after){
+                case Jinchi::NONE:
+                case Jinchi::DAME:
+                case Jinchi::WHITE:
+                case Jinchi::BLACK:
+                    return after;
+                case Jinchi::WHITE_STONE:
+                    return Jinchi::WHITE;
+                case Jinchi::BLACK_STONE:
+                    return Jinchi::BLACK;
+            }
+            break;
+        case Jinchi::WHITE:
+                switch(after){
+                    case Jinchi::BLACK:
+                    case Jinchi::BLACK_STONE:
+                    case Jinchi::DAME:
+                        return Jinchi::DAME;
+                        break;
+                    case Jinchi::WHITE:
+                    case Jinchi::WHITE_STONE:
+                    case Jinchi::NONE:
+                        return Jinchi::WHITE;
+                        break;
+                }
+            break;
+        case Jinchi::BLACK:
+                switch(after){
+                    case Jinchi::BLACK:
+                    case Jinchi::BLACK_STONE:
+                    case Jinchi::NONE:
+                        return Jinchi::BLACK;
+                        break;
+                    case Jinchi::WHITE:
+                    case Jinchi::WHITE_STONE:
+                    case Jinchi::DAME:
+                        return Jinchi::DAME;
+                        break;
+                }
+            break;
+        default:
+            return before;
+    }
+}
+
 void Goban::setGoishiKari(int x, int y, GOISHI goishi){
     assert(goishi == WHITE || goishi == BLACK || goishi == NONE);
     assert(x >= 0 && x < BAN_SIZE );
@@ -88,6 +196,7 @@ Goban::Goban(){
     for(int i = 0; i < BAN_SIZE; i++){
         for (int j = 0; j < BAN_SIZE; j++){
             goban[i][j] = NONE;
+            jinchi[i][j] = Jinchi::NONE;
             checkBoard[i][j] = false;
         }
     }

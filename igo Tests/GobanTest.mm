@@ -72,6 +72,83 @@ using namespace std;
     XCTAssertEqual(goban2->getAgehamaShiro(), 1);
 }
 
+- (void)testCalcJinchi
+{
+    Goban* goban = new Goban();
+    goban->setGoishi(4, 0, WHITE);
+    goban->setGoishi(4, 1, WHITE);
+    goban->setGoishi(4, 2, WHITE);
+    goban->setGoishi(4, 3, WHITE);
+    goban->setGoishi(3, 4, WHITE);
+    goban->setGoishi(4, 5, WHITE);
+    goban->setGoishi(4, 6, WHITE);
+    goban->setGoishi(4, 7, WHITE);
+    goban->setGoishi(4, 8, WHITE);
+    
+    goban->setGoishi(5, 0, BLACK);
+    goban->setGoishi(5, 1, BLACK);
+    goban->setGoishi(5, 2, BLACK);
+    goban->setGoishi(5, 3, BLACK);
+    goban->setGoishi(5, 4, BLACK);
+    goban->setGoishi(5, 5, BLACK);
+    goban->setGoishi(5, 6, BLACK);
+    goban->setGoishi(5, 7, BLACK);
+    goban->setGoishi(5, 8, BLACK);
+    
+    
+    int i, j;
+    for (i = 0; i < BAN_SIZE; i++){
+        for(j = 0; j < BAN_SIZE; j++){
+            goban->calcJinchi(i, j);
+        }
+    }
+    Jinchi::Value result[BAN_SIZE][BAN_SIZE] = {
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE,  Jinchi::DAME, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+    };
+    
+    for (i = 0; i < BAN_SIZE; i++){
+        for(j = 0; j < BAN_SIZE; j++){
+            XCTAssertEqual(result[i][j], goban->getJinchi(i, j));
+        }
+    }
+}
+
+- (void)testChangeJinchiState
+{
+    Goban* goban = new Goban();
+    Jinchi::Value before = Jinchi::NONE;
+    Jinchi::Value after = Jinchi::BLACK;
+    XCTAssertEqual(Jinchi::BLACK, goban->changeJinchiState(before, after));
+    
+    Jinchi::Value before1 = Jinchi::NONE;
+    Jinchi::Value after1 = Jinchi::WHITE;
+    XCTAssertEqual(Jinchi::WHITE, goban->changeJinchiState(before1, after1));
+    
+    Jinchi::Value before2 = Jinchi::NONE;
+    Jinchi::Value after2 = Jinchi::DAME;
+    XCTAssertEqual(Jinchi::DAME, goban->changeJinchiState(before2, after2));
+    
+    Jinchi::Value before3 = Jinchi::WHITE;
+    Jinchi::Value after3 = Jinchi::BLACK;
+    XCTAssertEqual(Jinchi::DAME, goban->changeJinchiState(before3, after3));
+    
+    Jinchi::Value before4 = Jinchi::BLACK;
+    Jinchi::Value after4 = Jinchi::WHITE;
+    XCTAssertEqual(Jinchi::DAME, goban->changeJinchiState(before4, after4));
+    
+    Jinchi::Value before5 = Jinchi::NONE;
+    Jinchi::Value after5 = Jinchi::WHITE_STONE;
+    XCTAssertEqual(Jinchi::WHITE, goban->changeJinchiState(before5, after5));
+}
+
 - (void)testSetGoishi
 {
     Goban* goban = new Goban();
