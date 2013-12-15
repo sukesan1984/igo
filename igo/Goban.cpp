@@ -86,50 +86,55 @@ State::Value Goban::getState(int x, int y){
     return state[x][y];
 }
 
-Jinchi::Value Goban::calcJinchi(int x, int y) {
-    // 自身の陣地を保存する。
-    Jinchi::Value selfJinchi = this->getJinchi(x, y);
+void Goban::calcJinchi(int x, int y) {
+    GOISHI color = this->getGoishi(x, y);
+    Jinchi::Value jinchi = this->getJinchi(x, y);
     if(this->checkBoard[x][y]){
-        return selfJinchi;
+        return;
     }
     this->checkBoard[x][y] = true;
-    // 自身の色を見る。
-    GOISHI selfColor = this->getGoishi(x, y);
-    
-    switch(selfColor){
+    switch(color){
         case BLACK:
-            selfJinchi = Jinchi::BLACK_STONE;
+            jinchi = Jinchi::BLACK_STONE;
+            this->setJinchi(x, y, jinchi);
             break;
         case WHITE:
-            selfJinchi = Jinchi::WHITE_STONE;
+            jinchi = Jinchi::WHITE_STONE;
+            this->setJinchi(x, y, jinchi);
             break;
         default:
-            
-            // 右隣の陣地をチェックして、selfJinchiに突っ込む。
-            if(x < (BAN_SIZE -1)){
-                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x + 1, y));
-                this->setJinchi(x, y, selfJinchi);
-            }
-            
-            // 上の陣地をチェックして、selfJinchiに突っ込む。
-            if(y < (BAN_SIZE - 1)){
-                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x, y + 1));
-                this->setJinchi(x, y, selfJinchi);
-            }
-            // 下の陣地をチェックして、selfJinchiに突っ込む。
-            if(y > 0){
-                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x, y - 1));
-                this->setJinchi(x, y, selfJinchi);
-            }
-            // 左の陣地をチェックして、selfJinchiに突っ込む。
-            if(x > 0){
-                selfJinchi = this->changeJinchiState(selfJinchi, this->calcJinchi(x - 1, y));
-                this->setJinchi(x, y, selfJinchi);
-            }
-            
+            break;
     }
-    this->setJinchi(x, y, selfJinchi);
-    return selfJinchi;
+    
+    
+    if(jinchi == Jinchi::NONE){
+        return;
+    }
+    Jinchi::Value afterJinchi;
+    if(x < BAN_SIZE - 1){
+        //自分が隣りにいる時にどうなるか。
+        afterJinchi = this->changeJinchiState(this->getJinchi(x + 1, y), jinchi);
+        this->setJinchi(x + 1, y, afterJinchi);
+        this->calcJinchi(x + 1, y);
+    }
+    
+    if(x > 0){
+        afterJinchi = this->changeJinchiState(this->getJinchi(x - 1, y), jinchi);
+        this->setJinchi(x - 1, y, afterJinchi);
+        this->calcJinchi(x - 1, y);
+    }
+    
+    if(y < BAN_SIZE - 1){
+        afterJinchi = this->changeJinchiState(this->getJinchi(x, y + 1), jinchi);
+        this->setJinchi(x, y + 1, afterJinchi);
+        this->calcJinchi(x, y + 1);
+    }
+    
+    if(y > 0){
+        afterJinchi = this->changeJinchiState(this->getJinchi(x, y - 1), jinchi);
+        this->setJinchi(x, y - 1, afterJinchi);
+        this->calcJinchi(x, y - 1);
+    }
 }
 
 Jinchi::Value Goban::getJinchi(int x, int y){
@@ -333,6 +338,7 @@ int Goban::removeGoishi(int x, int y, GOISHI color){
             break;
     }
     
+    this->state[x][y] = State::NONE;
     return removedNum;
 }
 

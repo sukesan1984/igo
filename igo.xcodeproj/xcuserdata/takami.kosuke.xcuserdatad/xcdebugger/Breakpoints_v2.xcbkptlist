@@ -130,11 +130,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "Goban::setGoishiKari(int x, int y, GOISHI goishi)"
             landmarkType = "5">
          </BreakpointContent>
@@ -146,11 +146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225">
+            startingLineNumber = "230"
+            endingLineNumber = "230">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,11 +160,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "Goban::Goban()"
             landmarkType = "5">
          </BreakpointContent>
@@ -176,11 +176,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "367"
-            endingLineNumber = "367"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
             landmarkName = "-testHasKokyuAround"
             landmarkType = "5">
             <Locations>
@@ -236,11 +236,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "415"
-            endingLineNumber = "415"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
             landmarkName = "-testHasKokyuAround"
             landmarkType = "5">
             <Locations>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
             landmarkName = "-testHasKokyuAround"
             landmarkType = "5">
             <Locations>
@@ -356,11 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "368"
-            endingLineNumber = "368"
+            startingLineNumber = "390"
+            endingLineNumber = "390"
             landmarkName = "-testHasKokyuAround"
             landmarkType = "5">
          </BreakpointContent>
@@ -372,11 +372,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408195991.695455"
+            timestampString = "408799848.548984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "Ban::putGoishi(int x, int y, GOISHI goishi)"
             landmarkType = "5">
          </BreakpointContent>
@@ -388,11 +388,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408797637.086792"
+            timestampString = "408814213.050866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "Ban::update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -404,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goishi.cpp"
-            timestampString = "408789560.458899"
+            timestampString = "408798968.454785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "Goishi::show(GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -420,11 +420,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goishi.cpp"
-            timestampString = "408789560.458899"
+            timestampString = "408798968.454785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "Goishi::setImage(GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -436,11 +436,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408797637.086792"
+            timestampString = "408814213.050866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "Ban::update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -452,11 +452,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goishi.cpp"
-            timestampString = "408789560.458899"
+            timestampString = "408798968.454785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "Goishi::setImage(GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -468,11 +468,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goishi.cpp"
-            timestampString = "408789560.458899"
+            timestampString = "408798968.454785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "Goishi::setImage(GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -484,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408195991.695455"
+            timestampString = "408799848.548984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "Ban::putGoishi(int x, int y, GOISHI goishi)"
             landmarkType = "5">
          </BreakpointContent>
@@ -500,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goishi.cpp"
-            timestampString = "408789560.458899"
+            timestampString = "408798968.454785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "Goishi::setImage(GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -516,11 +516,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "Goban::Goban()"
             landmarkType = "5">
          </BreakpointContent>
@@ -532,11 +532,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408794968.183698"
+            timestampString = "408814654.1503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "420"
-            endingLineNumber = "420"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
             landmarkName = "Goban::canPutGoishi(int x, int y, GOISHI color)"
             landmarkType = "5">
             <Locations>
@@ -578,11 +578,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408814654.1503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "405"
-            endingLineNumber = "405"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "Goban::hasKokyuAround(int x, int y, GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -594,11 +594,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "Goban::Goban()"
             landmarkType = "5">
          </BreakpointContent>
@@ -610,11 +610,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408797637.086792"
+            timestampString = "408814213.050866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "Ban::update()"
             landmarkType = "5">
             <Locations>
@@ -656,11 +656,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408189031.630136"
+            timestampString = "408799848.548984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "Ban::putGoishi(int x, int y, GOISHI goishi)"
             landmarkType = "5">
          </BreakpointContent>
@@ -672,11 +672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "-testCanPutGoishi"
             landmarkType = "5">
             <Locations>
@@ -732,11 +732,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "Goban::Goban()"
             landmarkType = "5">
          </BreakpointContent>
@@ -748,11 +748,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
             landmarkName = "Goban::tryToRemoveAround(int x, int y, GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -764,11 +764,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "Goban::tryToRemoveAround(int x, int y, GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -780,11 +780,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "Goban::tryToRemoveAround(int x, int y, GOISHI color)"
             landmarkType = "5">
          </BreakpointContent>
@@ -812,11 +812,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "Goban::setGoishiKari(int x, int y, GOISHI goishi)"
             landmarkType = "5">
          </BreakpointContent>
@@ -992,11 +992,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "-testCanPutGoishi"
             landmarkType = "5">
             <Locations>
@@ -1052,11 +1052,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
             landmarkName = "Goban::removeGoishi(int x, int y, GOISHI color)"
             landmarkType = "5">
             <Locations>
@@ -1098,11 +1098,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814100.347332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-testCanPutGoishi"
             landmarkType = "5">
             <Locations>
@@ -1172,57 +1172,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813928.362289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "Goban::calcJinchi(int x, int y)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igo"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408787053.667809"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igoTests"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408787055.313838"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "Goban::changeJinchiState(Jinchi::Value before, Jinchi::Value after)"
             landmarkType = "5">
             <Locations>
@@ -1264,11 +1218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814031.038624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "-testCalcJinchi"
             landmarkType = "5">
          </BreakpointContent>
@@ -1279,198 +1233,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "Goban::calcJinchi(int x, int y)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igo"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408540097.323051"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "191">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igoTests"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408540098.721182"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "191">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "Goban::calcJinchi(int x, int y)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igo"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408540106.593781"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "191">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igoTests"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408540106.594345"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "191">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            condition = "y==7"
-            continueAfterRunningActions = "No"
-            filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "Goban::calcJinchi(int x, int y)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igo"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408540822.304846"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "378">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igoTests"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408540824.038856"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "378">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            condition = "x==2 &amp;&amp; y==8"
-            continueAfterRunningActions = "No"
-            filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "Goban::calcJinchi(int x, int y)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igo"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408541962.344391"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "290">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Goban::calcJinchi(int, int)"
-                  moduleName = "igoTests"
-                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408541963.964187"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "290">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "igo Tests/GobanTest.mm"
-            timestampString = "408796472.567914"
+            timestampString = "408814031.038624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-testCalcJinchi"
             landmarkType = "5">
             <Locations>
@@ -1512,11 +1280,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813420.139621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89">
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "Goban::calcJinchi(int x, int y)"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -1525,11 +1295,11 @@
                   symbolName = "Goban::calcJinchi(int, int)"
                   moduleName = "igo"
                   urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408542212.889509"
+                  timestampString = "408803382.08176"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
                   offsetFromSymbolStart = "28">
                </Location>
                <Location
@@ -1539,11 +1309,11 @@
                   symbolName = "Goban::calcJinchi(int, int)"
                   moduleName = "igoTests"
                   urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo/Goban.cpp"
-                  timestampString = "408542212.889996"
+                  timestampString = "408803382.082236"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
                   offsetFromSymbolStart = "28">
                </Location>
             </Locations>
@@ -1676,11 +1446,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408792613.64792"
+            timestampString = "408813744.87349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
             landmarkName = "Goban::removeGoishi(int x, int y, GOISHI color)"
             landmarkType = "5">
             <Locations>
@@ -1722,11 +1492,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Goban.cpp"
-            timestampString = "408794968.183698"
+            timestampString = "408814654.1503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493"
+            startingLineNumber = "499"
+            endingLineNumber = "499"
             landmarkName = "Goban::confirm()"
             landmarkType = "5">
             <Locations>
@@ -1890,11 +1660,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408793279.130579"
+            timestampString = "408799848.548984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "Ban::changeGoishiState(int x, int y)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1907,11 +1677,11 @@
             condition = "state == State::REMOVE"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408797637.086792"
+            timestampString = "408814213.050866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "Ban::update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1923,11 +1693,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408797637.086792"
+            timestampString = "408814213.050866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "Ban::update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1939,12 +1709,260 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "igo/Ban.cpp"
-            timestampString = "408797637.086792"
+            timestampString = "408799848.548984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "Ban::changeGoishiState(int x, int y)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814100.347332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408814101.913183"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "3661">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408814101.913766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "7413">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814031.038624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408803563.306406"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "3391">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408803563.30698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "3602">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814100.347332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814100.347332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814031.038624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814031.038624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408803389.050258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "3391">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408803389.050817"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "3602">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814031.038624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "-testCalcJinchi"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408814032.840376"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "1477">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GobanTest testCalcJinchi]"
+                  moduleName = "igoTests"
+                  urlString = "file://localhost/Users/takami.kosuke/work/cocos2d/igo/igo%20Tests/GobanTest.mm"
+                  timestampString = "408814032.84092"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "3380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "igo Tests/GobanTest.mm"
+            timestampString = "408814053.585497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-testCalcJinchi"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

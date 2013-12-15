@@ -17,10 +17,9 @@ Ban* Ban::create(const char *pszFileName, Goban* goban)
         for (int i = 0; i < BAN_SIZE; i++){
             for (int j = 0; j < BAN_SIZE; j++){
                 Goishi* ishi = Goishi::create();
-                ishi->initWithSpriteFrameName("shiro.png");
+                ishi->initWithSpriteFrameName("null.png");
                 ishi->setPosition(pobSprite->getPos(i, j));
                 ishi->setScale(0.546875);
-                ishi->setVisible(false);
                 ishi->show(NONE);
                 pobSprite->addChild(ishi);
                 pobSprite->sprites[i][j] = ishi;
@@ -138,6 +137,13 @@ void Ban::pass(){
 void Ban::confirm(){
     //バッテンをつけてるところを消す。
     this->goban->confirm();
+    int i, j;
+    for (i = 0; i < BAN_SIZE; i++){
+        for(j = 0; j < BAN_SIZE; j++){
+            goban->clearCheckBoard();
+            goban->calcJinchi(i, j);
+        }
+    }
     this->update();
 }
 
@@ -159,8 +165,10 @@ void Ban::update(){
             Goishi* ishi = this->sprites[i][j];
             GOISHI color = this->goban->getGoishi(i, j);
             State::Value state = this->goban->getState(i, j);
+            Jinchi::Value jinchiState = this->goban->getJinchi(i, j);
             ishi->show(color);
             ishi->showState(state);
+            ishi->showJinchi(jinchiState);
         }
    }
 }

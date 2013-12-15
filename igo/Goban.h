@@ -47,9 +47,9 @@ public:
     
     // stateを取得する。
     State::Value getState(int x, int y);
-
+    
     // jinchiを計算して、jinchiに格納する。
-    Jinchi::Value calcJinchi(int x, int y);
+    void calcJinchi(int x, int y);
     
     Jinchi::Value getJinchi(int x, int y);
     

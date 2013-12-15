@@ -175,6 +175,7 @@ using namespace std;
     int i, j;
     for (i = 0; i < BAN_SIZE; i++){
         for(j = 0; j < BAN_SIZE; j++){
+            goban->clearCheckBoard();
             goban->calcJinchi(i, j);
         }
     }
@@ -195,6 +196,27 @@ using namespace std;
             XCTAssertEqual(result[i][j], goban->getJinchi(i, j));
         }
     }
+    
+    Goban *goban1 = new Goban();
+    goban1->putGoishi(4, 4, BLACK);
+    for (i = 0; i < BAN_SIZE; i++){
+        for(j = 0; j < BAN_SIZE; j++){
+            goban1->clearCheckBoard();
+            goban1->calcJinchi(i, j);
+        }
+    }
+    
+    for (i = 0; i < BAN_SIZE; i++){
+        for(j = 0; j < BAN_SIZE; j++){
+            if(i == 4 && j == 4){
+                XCTAssertEqual(goban1->getJinchi(i, j), Jinchi::BLACK_STONE);
+            } else {
+                XCTAssertEqual(goban1->getJinchi(i, j), Jinchi::BLACK);
+            }
+        }
+    }
+    
+    
 }
 
 - (void)testChangeJinchiState

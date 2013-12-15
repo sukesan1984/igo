@@ -18,6 +18,7 @@ using namespace cocos2d;
 class Goishi : public CCSprite{
     GOISHI color;
     CCSprite* batsu;
+    CCSprite* jinchi;
     bool dead;
 public:
     static Goishi* create();
@@ -25,6 +26,7 @@ public:
     void show(GOISHI color);//colorの色を表示する。
     void hide();
     void showState(State::Value state);
+    void showJinchi(Jinchi::Value jinchiState);
     Goishi();
     ~Goishi();
 };

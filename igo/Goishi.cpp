@@ -24,6 +24,12 @@ Goishi* Goishi::create()
         CCSprite* batsu = CCSprite::createWithSpriteFrameName("batsu.png");
         batsu->setVisible(false);
         pobSprite->batsu = batsu;
+        
+        CCSprite* jinchi = CCSprite::createWithSpriteFrameName("jinchiShiro.png");
+        jinchi->setVisible(false);
+        pobSprite->jinchi = jinchi;
+        
+        pobSprite->addChild(jinchi);
         pobSprite->addChild(batsu);
         pobSprite->autorelease();
         return pobSprite;
@@ -51,9 +57,9 @@ void Goishi::setImage(GOISHI color){
             this->color = WHITE;
             break;
         default:
-            this->hide();
+            pszFilename = "null.png";
             this->color = NONE;
-            return;
+            break;
     }
     CCSpriteFrame* _frame;
     _frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(pszFilename.c_str());
@@ -79,4 +85,25 @@ void Goishi::showState(State::Value state){
         default:
             break;
     }
+}
+
+void Goishi::showJinchi(Jinchi::Value jinchiState){
+    std::string pszFilename;
+    switch (jinchiState) {
+        case Jinchi::WHITE:
+            pszFilename = "jinchiShiro.png";
+            this->jinchi->setVisible(true);
+            break;
+        case Jinchi::BLACK:
+            pszFilename = "jinchiKuro.png";
+            this->jinchi->setVisible(true);
+            break;
+        default:
+            return;
+    }
+    CCSpriteFrame* _frame;
+    _frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(pszFilename.c_str());
+    this->jinchi->setTexture(_frame->getTexture());
+    this->jinchi->setPosition(ccp(this->getContentSize().width/2, this->getContentSize().height/2));
+    this->jinchi->setTextureRect(_frame->getRect(), false, _frame->getOriginalSize());
 }
