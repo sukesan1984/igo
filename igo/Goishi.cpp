@@ -66,8 +66,17 @@ void Goishi::hide(){
     this->setVisible(false);
 }
 
-void Goishi::changeDead(){
-    this->dead = !(this->dead);
-    this->batsu->setPosition(ccp(this->getContentSize().width/2, this->getContentSize().height/2));
-    this->batsu->setVisible(this->dead);
+void Goishi::showState(State::Value state){
+    switch (state) {
+        case State::NONE:
+            this->dead = false;
+            this->batsu->setVisible(this->dead);
+            break;
+        case State::REMOVE:
+            this->dead = true;
+            this->batsu->setPosition(ccp(this->getContentSize().width/2, this->getContentSize().height/2));
+            this->batsu->setVisible(this->dead);
+        default:
+            break;
+    }
 }

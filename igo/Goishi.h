@@ -24,7 +24,7 @@ public:
     void setImage(GOISHI color);
     void show(GOISHI color);//colorの色を表示する。
     void hide();
-    void changeDead();
+    void showState(State::Value state);
     Goishi();
     ~Goishi();
 };

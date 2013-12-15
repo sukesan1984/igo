@@ -46,6 +46,12 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
 }
 
 bool Ban::changeGoishiState(int x, int y){
+    CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
+    CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
+    if(!this->goban->changeGoishiState(x, y)){
+        return false;
+    }
+    this->update();
     return true;
 }
 
@@ -113,7 +119,7 @@ void Ban::onTouchOnCheckShi(cocos2d::CCTouch *touch){
     if(tapPos.x < 0 || tapPos.x > BAN_SIZE -1 || tapPos.y < 0 || tapPos.y > BAN_SIZE - 1){
         return;
     }
-    this->sprites[(int) tapPos.x][(int) tapPos.y]->changeDead();
+    this->changeGoishiState(tapPos.x, tapPos.y);
 }
 
 void Ban::onTouchMove(cocos2d::CCTouch *touch){
@@ -145,7 +151,9 @@ void Ban::update(){
         for (int j = 0; j < BAN_SIZE; j++){
             Goishi* ishi = this->sprites[i][j];
             GOISHI color = this->goban->getGoishi(i, j);
+            State::Value state = this->goban->getState(i, j);
             ishi->show(color);
+            ishi->showState(state);
         }
    }
 }

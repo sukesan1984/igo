@@ -28,6 +28,7 @@ class Goban{
 public:
     GOISHI goban[BAN_SIZE][BAN_SIZE]; //何も無い時はundef, WHITE, BLACKが入る。
     Jinchi::Value jinchi[BAN_SIZE][BAN_SIZE];
+    State::Value state[BAN_SIZE][BAN_SIZE];
     
     History* getHistory();
     int getAgehamaKuro();
@@ -40,6 +41,12 @@ public:
     
     // 実際に置く。置けなかったらfalse
     bool putGoishi(int x, int y, GOISHI color);
+    
+    // changeState
+    bool changeGoishiState(int x, int y);
+    
+    // stateを取得する。
+    State::Value getState(int x, int y);
 
     // jinchiを計算して、jinchiに格納する。
     Jinchi::Value calcJinchi(int x, int y);

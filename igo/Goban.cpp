@@ -48,6 +48,29 @@ bool Goban::putGoishi(int x, int y, GOISHI color){
     return true;
 }
 
+bool Goban::changeGoishiState(int x, int y){
+    // その位置に碁石が存在するか。
+    if(this->getGoishi(x, y) == NONE) {
+        return false;
+    }
+    // 碁石が存在する時
+    switch(this->getState(x, y)){
+        case State::REMOVE:
+            this->state[x][y] = State::NONE;
+            return true;
+        case State::NONE:
+            this->state[x][y] = State::REMOVE;
+            return true;
+    }
+}
+
+State::Value Goban::getState(int x, int y){
+    assert(x >= 0 && x < BAN_SIZE );
+    assert(y >= 0 && y < BAN_SIZE );
+    
+    return state[x][y];
+}
+
 Jinchi::Value Goban::calcJinchi(int x, int y) {
     // 自身の陣地を保存する。
     Jinchi::Value selfJinchi = this->getJinchi(x, y);
@@ -197,6 +220,7 @@ Goban::Goban(){
         for (int j = 0; j < BAN_SIZE; j++){
             goban[i][j] = NONE;
             jinchi[i][j] = Jinchi::NONE;
+            state[i][j] = State::NONE;
             checkBoard[i][j] = false;
         }
     }

@@ -34,4 +34,11 @@ struct Jinchi {
         DAME = 5,
     };
 };
+
+struct State {
+    enum Value {
+        NONE = 0,
+        REMOVE = 1,
+    };
+};
 #endif

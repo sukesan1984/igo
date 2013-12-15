@@ -72,6 +72,21 @@ using namespace std;
     XCTAssertEqual(goban2->getAgehamaShiro(), 1);
 }
 
+- (void)testChangeGoishiState
+{
+    Goban* goban = new Goban();
+    goban->putGoishi(0, 0, WHITE);
+    goban->putGoishi(0, 1, BLACK);
+    
+    XCTAssertEqual(goban->changeGoishiState(0, 0), true);
+    XCTAssertEqual(goban->changeGoishiState(0, 1), true);
+    XCTAssertEqual(goban->changeGoishiState(0, 2), false);
+    
+    XCTAssertEqual(goban->getState(0, 0), State::REMOVE);
+    XCTAssertEqual(goban->getState(0, 1), State::REMOVE);
+    XCTAssertEqual(goban->getState(0, 2), State::NONE);
+}
+
 - (void)testCalcJinchi
 {
     Goban* goban = new Goban();
