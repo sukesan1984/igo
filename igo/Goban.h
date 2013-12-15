@@ -87,6 +87,9 @@ public:
     // passする。
     void pass();
     
+    // ×がついているところを取り除く。
+    void confirm();
+    
     Goban();
     ~Goban();
 };

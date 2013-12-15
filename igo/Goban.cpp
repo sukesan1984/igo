@@ -34,16 +34,6 @@ bool Goban::putGoishi(int x, int y, GOISHI color){
     this->setGoishi(x, y, color);
     int removedNum = this->tryToRemoveAround(x, y, this->getGoishi(x, y));
     ((Te*)this->history->getLast())->setRemovedNum(removedNum);
-    switch (color) {
-        case WHITE:
-            agehamaShiro->increase(removedNum);
-            break;
-        case BLACK:
-            agehamaKuro->increase(removedNum);
-            break;
-        default:
-            break;
-    }
     
     return true;
 }
@@ -307,6 +297,16 @@ int Goban::removeGoishi(int x, int y, GOISHI color){
         koX = -1;
         koY = -1;
     }
+    switch (color) {
+        case BLACK:
+            agehamaShiro->increase(1);
+            break;
+        case WHITE:
+            agehamaKuro->increase(1);
+            break;
+        default:
+            break;
+    }
     
     return removedNum;
 }
@@ -461,6 +461,16 @@ bool Goban::hasCanGetGoishiAround(int x, int y){
 
 void Goban::pass(){
     this->history->pushPass();
+}
+
+void Goban::confirm(){
+    for(int i = 0; i < BAN_SIZE; i++){
+        for(int j = 0; j < BAN_SIZE; j++){
+            if(this->getState(i, j) == State::REMOVE){
+                this->removeGoishi(i, j, this->getGoishi(i, j));
+            }
+        }
+    }
 }
 
 Goban::~Goban(){

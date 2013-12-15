@@ -141,7 +141,7 @@ void HelloWorld::pass(){
 }
 
 void HelloWorld::ok(){
-    
+    ban->confirm();
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)

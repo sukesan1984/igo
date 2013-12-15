@@ -48,6 +48,27 @@ using namespace std;
     XCTAssertEqual(goban->getHistory()->getLast()->isPass(), true);
 }
 
+- (void)testConfirm
+{
+    Goban* goban = new Goban();
+    goban->putGoishi(0, 0, WHITE);
+    goban->putGoishi(0, 1, WHITE);
+    goban->putGoishi(4, 4, WHITE);
+    goban->putGoishi(8, 8, BLACK);
+    
+    goban->changeGoishiState(0, 0);
+    goban->changeGoishiState(8, 8);
+    
+    goban->confirm();
+    
+    XCTAssertEqual(goban->getAgehamaKuro(), 2);
+    XCTAssertEqual(goban->getAgehamaShiro(), 1);
+    XCTAssertEqual(goban->getGoishi(0, 0), NONE);
+    XCTAssertEqual(goban->getGoishi(0, 1), NONE);
+    XCTAssertEqual(goban->getGoishi(8, 8), NONE);
+    XCTAssertEqual(goban->getGoishi(4, 4), WHITE);
+}
+
 - (void)testPutGoishi
 {
     Goban* goban0 = new Goban();

@@ -134,6 +134,12 @@ void Ban::pass(){
     turn++;
 }
 
+void Ban::confirm(){
+    //バッテンをつけてるところを消す。
+    this->goban->confirm();
+    this->update();
+}
+
 CCPoint Ban::getTouchedPos(cocos2d::CCPoint touchedLocation){
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     float scale = this->getScale();
