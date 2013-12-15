@@ -51,6 +51,7 @@ bool Ban::changeGoishiState(int x, int y){
     if(!this->goban->changeGoishiState(x, y)){
         return false;
     }
+    this->goban->clearCheckBoard();
     this->update();
     return true;
 }

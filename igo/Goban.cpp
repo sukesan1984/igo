@@ -39,11 +39,36 @@ bool Goban::putGoishi(int x, int y, GOISHI color){
 }
 
 bool Goban::changeGoishiState(int x, int y){
+    GOISHI color = this->getGoishi(x, y);
+    if(this->checkBoard[x][y]){
+        return true;
+    }
     // その位置に碁石が存在するか。
     if(this->getGoishi(x, y) == NONE) {
         return false;
     }
+    
+    this->checkBoard[x][y] = true;
     // 碁石が存在する時
+    // 右をチェック
+    if( x < BAN_SIZE - 1 && this->getGoishi(x + 1, y) == color){
+        this->changeGoishiState(x + 1, y);
+    }
+    // 左をチェック
+    if( x > 0 && this->getGoishi(x - 1, y) == color){
+        this->changeGoishiState(x - 1, y);
+    }
+    
+    // 上をチェック
+    if( y < BAN_SIZE - 1 && this->getGoishi(x, y + 1) == color){
+        this->changeGoishiState(x, y + 1);
+    }
+    
+    // 下をチェック
+    if( y > 0 && this->getGoishi(x, y - 1) && this->getGoishi(x, y - 1) == color){
+        this->changeGoishiState(x, y - 1);
+    }
+    
     switch(this->getState(x, y)){
         case State::REMOVE:
             this->state[x][y] = State::NONE;
@@ -380,8 +405,6 @@ bool Goban::hasKokyuAround(int x, int y, GOISHI color){
     return false;
 }
 
-
-
 void Goban::clearCheckBoard(){
     for(int i = 0; i < BAN_SIZE; i++){
         for (int j = 0; j < BAN_SIZE; j++){
@@ -464,6 +487,7 @@ void Goban::pass(){
 }
 
 void Goban::confirm(){
+    this->clearCheckBoard();
     for(int i = 0; i < BAN_SIZE; i++){
         for(int j = 0; j < BAN_SIZE; j++){
             if(this->getState(i, j) == State::REMOVE){

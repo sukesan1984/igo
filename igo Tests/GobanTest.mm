@@ -97,15 +97,55 @@ using namespace std;
 {
     Goban* goban = new Goban();
     goban->putGoishi(0, 0, WHITE);
+    goban->putGoishi(1, 0, WHITE);
+    goban->putGoishi(2, 0, WHITE);
+    goban->putGoishi(2, 1, WHITE);
+    goban->putGoishi(2, 2, WHITE);
     goban->putGoishi(0, 1, BLACK);
+    goban->clearCheckBoard();
     
     XCTAssertEqual(goban->changeGoishiState(0, 0), true);
     XCTAssertEqual(goban->changeGoishiState(0, 1), true);
     XCTAssertEqual(goban->changeGoishiState(0, 2), false);
     
     XCTAssertEqual(goban->getState(0, 0), State::REMOVE);
+    XCTAssertEqual(goban->getState(1, 0), State::REMOVE);
+    XCTAssertEqual(goban->getState(2, 0), State::REMOVE);
+    XCTAssertEqual(goban->getState(2, 1), State::REMOVE);
+    XCTAssertEqual(goban->getState(2, 2), State::REMOVE);
     XCTAssertEqual(goban->getState(0, 1), State::REMOVE);
     XCTAssertEqual(goban->getState(0, 2), State::NONE);
+    goban->clearCheckBoard();
+    
+    XCTAssertEqual(goban->changeGoishiState(1, 0), true);
+    XCTAssertEqual(goban->getState(0, 0), State::NONE);
+    XCTAssertEqual(goban->getState(1, 0), State::NONE);
+    XCTAssertEqual(goban->getState(2, 0), State::NONE);
+    XCTAssertEqual(goban->getState(2, 1), State::NONE);
+    XCTAssertEqual(goban->getState(2, 2), State::NONE);
+    
+    Goban* goban1 = new Goban();
+    goban1->putGoishi(3, 5, BLACK);
+    goban1->putGoishi(3, 3, WHITE);
+    goban1->putGoishi(4, 3, BLACK);
+    goban1->putGoishi(3, 4, WHITE);
+    
+    goban1->putGoishi(4, 4, BLACK);
+    goban1->putGoishi(4, 5, WHITE);
+    
+    goban1->putGoishi(2, 4, BLACK);
+    
+    goban1->clearCheckBoard();
+    XCTAssertEqual(goban1->changeGoishiState(4, 3), true);
+    XCTAssertEqual(goban1->getState(3, 5), State::NONE);
+    XCTAssertEqual(goban1->getState(3, 3), State::NONE);
+    XCTAssertEqual(goban1->getState(3, 4), State::NONE);
+    XCTAssertEqual(goban1->getState(2, 4), State::NONE);
+    
+    XCTAssertEqual(goban1->getState(4, 3), State::REMOVE);
+    XCTAssertEqual(goban1->getState(4, 4), State::REMOVE);
+    XCTAssertEqual(goban1->getState(4, 5), State::NONE);
+    
 }
 
 - (void)testCalcJinchi
