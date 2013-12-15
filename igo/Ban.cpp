@@ -45,6 +45,10 @@ bool Ban::putGoishi(int x, int y, GOISHI goishi){
     return true;
 }
 
+bool Ban::changeGoishiState(int x, int y){
+    return true;
+}
+
 bool Ban::makeGoishiDead(int x, int y){
     return true;
 }

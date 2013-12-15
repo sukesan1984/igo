@@ -30,6 +30,9 @@ public:
     // 候補があれば候補の位置に石を置く。
     // 座標に石（黒 or 白)を置く。置けたら:true, 置けなかったら:false
     bool putGoishi(int x, int y, GOISHI goishi);
+    // 座標に石があれば、×をつけて、trueを返す。無ければ、false
+    bool changeGoishiState(int x, int y);
+    
     //死んでる石をチェックする
     bool makeGoishiDead(int x, int y);
     // 候補を表示する。

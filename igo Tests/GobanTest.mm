@@ -103,15 +103,15 @@ using namespace std;
         }
     }
     Jinchi::Value result[BAN_SIZE][BAN_SIZE] = {
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE,  Jinchi::DAME, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
-        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK},
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE,Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE },
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE,Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE },
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE,Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE },
+        {Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE,Jinchi::WHITE_STONE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE, Jinchi::WHITE },
+        {Jinchi::WHITE_STONE, Jinchi::WHITE_STONE, Jinchi::WHITE_STONE, Jinchi::WHITE_STONE,Jinchi::DAME, Jinchi::WHITE_STONE, Jinchi::WHITE_STONE, Jinchi::WHITE_STONE, Jinchi::WHITE_STONE },
+        {Jinchi::BLACK_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK_STONE,Jinchi::BLACK_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK_STONE, Jinchi::BLACK_STONE },
+        {Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK,Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK },
+        {Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK,Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK },
+        {Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK,Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK, Jinchi::BLACK },
     };
     
     for (i = 0; i < BAN_SIZE; i++){
