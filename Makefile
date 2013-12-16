@@ -27,4 +27,4 @@ test-with-coverage:
 
 send-coverage:
 	coveralls \
-		-e igoTest/Tests
+		-e igo\ Tests
