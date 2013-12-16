@@ -20,7 +20,7 @@
             <key>batsu.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{266,390},{64,64}}</string>
+                <string>{{317,324},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>candidate.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{251,324},{64,64}}</string>
+                <string>{{266,390},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>jinchiKuro.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,414},{64,64}}</string>
+                <string>{{251,324},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>jinchiShiro.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{134,414},{64,64}}</string>
+                <string>{{200,414},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,6 +72,19 @@
             <key>kuro.png</key>
             <dict>
                 <key>frame</key>
+                <string>{{134,414},{64,64}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{64,64}}</string>
+                <key>sourceSize</key>
+                <string>{64,64}</string>
+            </dict>
+            <key>null.png</key>
+            <dict>
+                <key>frame</key>
                 <string>{{68,414},{64,64}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
@@ -81,6 +94,19 @@
                 <string>{{0,0},{64,64}}</string>
                 <key>sourceSize</key>
                 <string>{64,64}</string>
+            </dict>
+            <key>ok.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{324,2},{162,88}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{162,88}}</string>
+                <key>sourceSize</key>
+                <string>{162,88}</string>
             </dict>
             <key>pass.png</key>
             <dict>
@@ -118,7 +144,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e7393d1ef333d0e78fec9efe42a7f6d5:f22b3b944d9ed4caaa37abbb1ec1b6a1:cf282022131b8914ef6e31c730069b8f$</string>
+            <string>$TexturePacker:SmartUpdate:69a4b957c8abd7dd8de245d2c436d847:53d2017ca05bfaa946f149b295bc8576:cf282022131b8914ef6e31c730069b8f$</string>
             <key>textureFileName</key>
             <string>goishi.png</string>
         </dict>
