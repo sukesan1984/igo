@@ -25,6 +25,7 @@ class Ban : public CCSprite {
     float OFFSET = 20;
     GAMEMODE mode;
 public:
+    GAMEMODE getMode();
     static Ban* create(const char *pszFileName, Goban* goban);
     // 置く候補を立てる。
     // 候補があれば候補の位置に石を置く。

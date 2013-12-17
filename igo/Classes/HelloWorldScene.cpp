@@ -34,13 +34,7 @@ bool HelloWorld::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
-    CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
-                                        "CloseNormal.png",
-                                        "CloseSelected.png",
-                                        this,
-                                        menu_selector(HelloWorld::menuCloseCallback) );
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("goishi.plist");
-    pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
     
     CCLayerColor *background = CCLayerColor::create(ccc4(250, 255 , 250, 122));
     background->setContentSize(CCSizeMake(360, 40));
@@ -69,7 +63,7 @@ bool HelloWorld::init()
     pOkButton->setVisible(true);
     
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, pPassButton, pOkButton, NULL);
+    CCMenu* pMenu = CCMenu::create(pPassButton, pOkButton, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
@@ -82,7 +76,6 @@ bool HelloWorld::init()
     ban = Ban::create("ban.png", goban);
     // position the sprite on the center of the screen
     ban->setPosition( ccp(size.width/2, size.height/2) );
-    //ban->setScale(0.55);
     
     kuroAgehama = CCLabelTTF::create(CCString::createWithFormat("黒: %d", goban->getAgehamaKuro() )->getCString(), "Thonburi", 20);
     kuroAgehama->setPosition(ccp(20, size.height - 80));
@@ -108,6 +101,19 @@ bool HelloWorld::init()
 void HelloWorld::update(){
     kuroAgehama->setString(CCString::createWithFormat("黒: %d", goban->getAgehamaKuro())->getCString());
     shiroAgehama->setString(CCString::createWithFormat("白: %d", goban->getAgehamaShiro())->getCString());
+    
+    switch(ban->getMode()){
+        case PLAY:
+            pOkButton->setVisible(false);
+            pOkButton->setEnabled(false);
+            break;
+        case CHECK_SHI:
+            pPassButton->setVisible(false);
+            pPassButton->setEnabled(false);
+            pOkButton->setVisible(true);
+            pOkButton->setEnabled(true);
+            break;
+    }
 }
 
 

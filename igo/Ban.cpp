@@ -32,6 +32,10 @@ Ban* Ban::create(const char *pszFileName, Goban* goban)
     return NULL;
 }
 
+GAMEMODE Ban::getMode(){
+    return mode;
+}
+
 bool Ban::putGoishi(int x, int y, GOISHI goishi){
     CCAssert(x >= 0 && x <= BAN_SIZE - 1, "x must be defined");
     CCAssert(y >= 0 && y <= BAN_SIZE - 1, "y must be defined");
@@ -127,7 +131,8 @@ void Ban::onTouchMove(cocos2d::CCTouch *touch){
 }
 
 void Ban::pass(){
-    if(this->goban->getHistory()->getLast()->isPass()){
+    Te* last = this->goban->getHistory()->getLast();
+    if(last && last->isPass()){
         mode = CHECK_SHI;
     }
     this->goban->pass();
